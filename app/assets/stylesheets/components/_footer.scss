@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  p {
+    @include text-content($line-color);
+  }
+
+  .bold {
+    @include text-content-bold($line-color)
+  }
+}
+
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
