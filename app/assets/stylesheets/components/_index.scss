@@ -3,3 +3,37 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
+@import "duckcard";
+
+
+.index-container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.card-pub {
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('ad.png');
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  border-radius: $border-radius-l;
+  padding: 1em 2em;
+  text-align: center;
+  grid-column: span 2;
+
+  h3 {
+  font-size: 40px;
+  font-family: $body-font;
+  color: $white-color;
+  margin: 10px;
+  }
+
+  .bold {
+    @include h3($white-color);
+    font-size: 40px;
+    margin: 10px;
+  }
+}
