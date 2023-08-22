@@ -1,12 +1,13 @@
 // External libraries
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
-// IMPORTER FONT AWESOME
+@import "font-awesome";
 
 
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
 @import "config/variables";
+@import "config/mixin";
 
 
 // Your CSS partials
@@ -16,7 +17,42 @@
 @import "pages/show";
 
 
+// DECLARATION GLOBALE
+
 body{
-  background-color: $background-color;
-  margin: 0;
+ background-color: $background-color;
+ margin: 0;
+ padding: 0;
+}
+
+
+// ASSIGNATION DES CLASSES TEXTES PAR DEFAULT
+h1{
+  @include h1;
+
+}
+h2{
+  @include h2;
+
+}
+h3{
+  @include h3;
+
+}
+h4{
+  @include h4;
+
+}
+h5{
+  @include h5;
+
+}
+p{
+  @include text-content();
+
+}
+a{
+  @include link();
+
+
 }

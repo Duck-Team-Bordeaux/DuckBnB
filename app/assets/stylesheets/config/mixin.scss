@@ -1,0 +1,5 @@
+@mixin white-rounded-box{
+  background-color: $white-color;
+  border-radius: $border-radius-l;
+  padding: 1em;
+}

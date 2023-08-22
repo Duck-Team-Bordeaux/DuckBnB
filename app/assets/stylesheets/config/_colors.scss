@@ -12,12 +12,6 @@ $warn-color: #FF9532;
 $eror-color: #FF3232;
 
 // Theme gradient
-// EXAMPLE D UTILISATION >
-// body{
-//   color: $white-color;
-//   font-family: $headers-font;
-//   @include prymary-gradient;
-// }
 
 @mixin prymary-gradient-background {
   background: rgb(255,80,60);
@@ -32,4 +26,13 @@ $eror-color: #FF3232;
 @mixin tertiary-gradient-background {
   background: rgb(253,232,39);
   background: linear-gradient(90deg, rgba(253,232,39,1) 0%, rgba(0,217,161,1) 100%);
+}
+
+// --------------- UTILISATION GRADIENT SUR FONT
+// ------> Fait un @include du gradient voulu
+// ------> Ajoute un l'@include ci dessous
+// ------> Ca marche :)
+@mixin font-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
