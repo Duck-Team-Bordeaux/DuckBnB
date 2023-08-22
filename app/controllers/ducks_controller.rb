@@ -42,6 +42,6 @@ class DucksController < ApplicationController
   end
 
   def set_duck
-    @duck = Find.duck(params[:id])
+    @duck = Duck.find(params[:id])
   end
 end

@@ -1,0 +1,166 @@
+.show-grid-container{
+  width: 80%;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.show-duck-box{
+@include white-rounded-box;
+margin-top: 3em;
+border-radius: 2em 0em 0em 2em;
+padding-left: 2em;
+padding-right: 2em;
+height: fit-content;
+position: relative;
+  h1{
+    margin: 0;
+  }
+  p{
+    @include text-content();
+  }
+}
+
+.price-item{
+  background-color: $secondary-color;
+  padding: 0 0.5em 0 1em;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  border-radius: 1em;
+  position: absolute;
+  bottom: -1em;
+  right: 0;
+  border-radius: 2em 0em 0em 2em;
+  @include h4($white-color);
+
+  span{
+    @include text-content-small($white-color);
+  }
+}
+
+.show-img-box{
+  position: relative;
+}
+
+.show-duck-picture{
+  width: 100%;
+  border-radius: 2em;
+  object-fit: cover;
+  position: relative;
+  border: solid 0.25em $secondary-color;
+  position: relative;
+}
+
+.show-user-box{
+  position: absolute;
+  bottom: -14em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  div{
+    padding: 1em 3em;
+    margin-left: -1em;
+    background-color: $white-color;
+    height: fit-content;
+    border-radius: 0 2em 2em 0;
+
+    h4{
+      padding: 0;
+      margin: 0;
+    }
+
+    p{
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.avatar-picture{
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border: 0.25em solid $primary-color;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.wishlist-icon{
+  font-size: 2.5em;
+  @include prymary-gradient;
+  @include font-gradient;
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  cursor: pointer;
+  &:hover{
+    filter: drop-shadow(0 0 0.25em $tertiary-color);
+  }
+}
+
+.show-box-order{
+  @include white-rounded-box;
+  grid-column: span 2;
+  margin-top: 2em;
+  h2{
+    text-align: right;
+    margin: 0 0.5em 0 0;
+  }
+  .show-my-order-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1em;
+    padding: 0 1em;
+  }
+}
+
+.calendar{
+
+}
+
+.recap-order{
+  @include text-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 4em;
+  position: relative;
+  div{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.total{
+  @include text-content-bold;
+}
+
+.btn-order{
+  @include prymary-gradient;
+  @include text-content-bold($white-color);
+  box-shadow: $btn-shadow;
+  position: absolute;
+  border-radius: 2em;
+  padding: 1em 1em 1em 1em;
+  width: 20%;
+  right: 40%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.show-box-review{
+  @include white-rounded-box;
+  grid-column: span 2;
+  margin-top: 4em;
+  h2{
+    margin-top: 0;
+  }
+}
