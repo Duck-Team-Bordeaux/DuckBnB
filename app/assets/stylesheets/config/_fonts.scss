@@ -1,0 +1,82 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+
+// Theme fonts
+$body-font: 'Barlow', sans-serif;
+$headers-font: 'Righteous', cursive;
+
+
+// Font Style Mixin
+@mixin h1($color: $text-color) {
+  color: $color;
+  font-family: $headers-font;
+  font-size: 3em;
+}
+@mixin h2($color: $text-color) {
+  color: $color;
+  font-family: $headers-font;
+  font-size: 2.5em;
+}
+@mixin h3($color: $text-color) {
+  color: $color;
+  font-family: $headers-font;
+  font-size: 2em;
+}
+@mixin h4($color: $text-color) {
+  color: $color;
+  font-family: $headers-font;
+  font-size: 1.5em;
+}
+@mixin h5($color: $text-color) {
+  color: $color;
+  font-family: $headers-font;
+  font-size: 1em;
+}
+@mixin text-content($color: $text-color) {
+  color: $color;
+  font-family: $body-font;
+  font-size: 1em;
+}
+@mixin text-content-bold($color: $text-color) {
+  color: $color;
+  font-family: $body-font;
+  font-size: 1em;
+}
+@mixin text-content-small($color: $text-color) {
+  color: $color;
+  font-family: $body-font;
+  font-size: 0.75em;
+}
+@mixin link($color: $text-color) {
+  color: $color;
+  font-family: $body-font;
+  font-size: 1em;
+  text-decoration: none;
+}
+@mixin link-bold($color: $text-color) {
+  color: $color;
+  font-family: $body-font;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";

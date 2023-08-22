@@ -1,0 +1,35 @@
+// Theme color
+$primary-color: #FF503C;
+$secondary-color: #00D9A1;
+$tertiary-color: #F42CFF;
+$quadrary-color: #FDE827;
+$text-color: #21041E;
+$white-color: #ffff;
+$background-color: #F5ECEA;
+$line-color: #CCCCDF;
+$success-color: #248A3D;
+$warn-color: #FF9532;
+$eror-color: #FF3232;
+
+// Theme gradient
+// EXAMPLE D UTILISATION >
+// body{
+//   color: $white-color;
+//   font-family: $headers-font;
+//   @include prymary-gradient;
+// }
+
+@mixin prymary-gradient {
+  background: rgb(255,80,60);
+  background: linear-gradient(90deg, rgba(255,80,60,1) 0%, rgba(244,44,255,1) 100%);
+}
+
+@mixin secondary-gradient {
+  background: rgb(255,80,60);
+background: linear-gradient(90deg, rgba(255,80,60,1) 0%, rgba(253,232,39,1) 100%);
+}
+
+@mixin tertiary-gradient {
+  background: rgb(253,232,39);
+  background: linear-gradient(90deg, rgba(253,232,39,1) 0%, rgba(0,217,161,1) 100%);
+}
