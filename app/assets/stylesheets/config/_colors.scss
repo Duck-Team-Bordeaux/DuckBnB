@@ -19,17 +19,17 @@ $eror-color: #FF3232;
 //   @include prymary-gradient;
 // }
 
-@mixin prymary-gradient {
+@mixin prymary-gradient-background {
   background: rgb(255,80,60);
   background: linear-gradient(90deg, rgba(255,80,60,1) 0%, rgba(244,44,255,1) 100%);
 }
 
-@mixin secondary-gradient {
+@mixin secondary-gradient-background {
   background: rgb(255,80,60);
-background: linear-gradient(90deg, rgba(255,80,60,1) 0%, rgba(253,232,39,1) 100%);
+  background: linear-gradient(90deg, rgba(255,80,60,1) 0%, rgba(253,232,39,1) 100%);
 }
 
-@mixin tertiary-gradient {
+@mixin tertiary-gradient-background {
   background: rgb(253,232,39);
   background: linear-gradient(90deg, rgba(253,232,39,1) 0%, rgba(0,217,161,1) 100%);
 }

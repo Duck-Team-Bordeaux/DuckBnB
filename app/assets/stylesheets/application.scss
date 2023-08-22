@@ -16,7 +16,11 @@
 
 
 // CECI EST UN TESTE NE PAS CODER ICI
-body{
-  @include h1($primary-color);
-  @include prymary-gradient;
+// body{
+//   @include h1($primary-color);
+//   @include prymary-gradient;
+// }
+body {
+  background-color: #F5ECEA;
+  margin: 0px;
 }
