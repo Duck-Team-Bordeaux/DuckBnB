@@ -92,8 +92,6 @@ position: relative;
 
 .wishlist-icon{
   font-size: 2.5em;
-  @include prymary-gradient;
-  @include font-gradient;
   position: absolute;
   right: 0.5em;
   top: 0.5em;
@@ -119,10 +117,6 @@ position: relative;
   }
 }
 
-.calendar{
-
-}
-
 .recap-order{
   @include text-content;
   display: flex;
@@ -144,8 +138,6 @@ position: relative;
 }
 
 .btn-order{
-  @include prymary-gradient;
-  @include text-content-bold($white-color);
   box-shadow: $btn-shadow;
   position: absolute;
   border-radius: 2em;
