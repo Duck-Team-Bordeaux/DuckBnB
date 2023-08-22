@@ -1,6 +1,6 @@
 # DuckBnB - Location de Rubber Ducks
 
-Bienvenue dans le projet DuckBnB, une plateforme innovante de location de rubber ducks conçue spécialement pour les développeurs en herbe ! Inspiré par l'esprit d'Airbnb, DuckBnB vise à fournir une expérience de location ludique et pratique pour les amateurs de codage qui ont besoin de leur propre "partenaire en caoutchouc" pour résoudre les défis techniques.
+Bienvenue dans le projet DuckBnB, une plateforme de location de rubber ducks conçue spécialement pour les développeurs en herbe ! Inspiré par l'esprit d'Airbnb, DuckBnB vise à fournir une expérience de location ludique et pratique pour les amateurs de codage qui ont besoin de leur propre "partenaire en caoutchouc" pour résoudre les défis techniques.
 
 ## Table des matières
 
