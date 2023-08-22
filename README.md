@@ -42,7 +42,7 @@ Voici un aperçu visuel de quelques pages de notre application :
 Nous accueillons favorablement toutes les contributions qui pourraient améliorer DuckBnB ! Si vous souhaitez contribuer, veuillez suivre ces étapes :
 
 1. Forker le projet depuis GitHub.
-2. Clonez votre fork localement : `git clone https://github.com/VotreNomUtilisateur/duckbnb.git`
+2. Clonez votre fork localement : `git clone git@github.com:Duck-Team-Bordeaux/DuckBnB.git`
 3. Créez une branche pour vos modifications : `git checkout -b fonctionnalité-nouvelle`
 4. Effectuez vos modifications et faites des commits : `git commit -m "Ajout de la fonctionnalité nouvelle"`
 5. Poussez vos modifications vers votre fork : `git push origin fonctionnalité-nouvelle`
