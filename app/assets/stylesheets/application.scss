@@ -13,14 +13,10 @@
 @import "components/index";
 @import "pages/index";
 
+@import "pages/show";
 
 
-// CECI EST UN TESTE NE PAS CODER ICI
-// body{
-//   @include h1($primary-color);
-//   @include prymary-gradient;
-// }
-body {
-  background-color: #F5ECEA;
-  margin: 0px;
+body{
+  background-color: $background-color;
+  margin: 0;
 }
