@@ -58,4 +58,3 @@ Nous tenons à remercier chaleureusement toute la communauté de développeurs, 
 
 Nous espérons que vous apprécierez l'utilisation de DuckBnB autant que nous avons apprécié le développer. Happy coding with your rubber duck!
 
-*Note : Ce README est une ébauche et peut nécessiter des ajustements pour correspondre parfaitement à votre projet. Assurez-vous de le personnaliser selon vos besoins.*
