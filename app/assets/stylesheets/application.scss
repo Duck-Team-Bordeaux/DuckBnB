@@ -12,11 +12,3 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-
-
-// CECI EST UN TESTE NE PAS CODER ICI
-body{
-  @include h1($primary-color);
-  @include prymary-gradient;
-}
