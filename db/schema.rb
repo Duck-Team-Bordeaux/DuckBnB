@@ -15,12 +15,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_122145) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "ducks_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "duck_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ducks_id"], name: "index_bookings_on_ducks_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["duck_id"], name: "index_bookings_on_duck_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "ducks", force: :cascade do |t|
@@ -39,12 +39,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_122145) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "ducks_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "duck_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ducks_id"], name: "index_favorites_on_ducks_id"
-    t.index ["users_id"], name: "index_favorites_on_users_id"
+    t.index ["duck_id"], name: "index_favorites_on_duck_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,9 +67,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_122145) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "ducks", column: "ducks_id"
-  add_foreign_key "bookings", "users", column: "users_id"
+  add_foreign_key "bookings", "ducks"
+  add_foreign_key "bookings", "users"
   add_foreign_key "ducks", "users"
-  add_foreign_key "favorites", "ducks", column: "ducks_id"
-  add_foreign_key "favorites", "users", column: "users_id"
+  add_foreign_key "favorites", "ducks"
+  add_foreign_key "favorites", "users"
 end
