@@ -1,6 +1,5 @@
 .index-container {
   width: 100vw;
-  padding-top: 5vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -34,9 +33,10 @@
   }
 }
 
-.duck-card {
+.duck-cards {
   width: 300px;
   height: 400px;
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

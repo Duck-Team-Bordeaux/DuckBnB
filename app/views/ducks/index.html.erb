@@ -1,5 +1,7 @@
 <div class="index-container">
 
+  <%= render 'components/filter' %>
+
   <%# <div class="card-pub">
     <h3>Everybody</h3>
     <p class="bold"> needs a duck</p>
@@ -7,7 +9,7 @@
   </div> %>
 
   <% @ducks.each do |duck| %>
-    <div class="duck-card">
+    <div class="duck-cards">
       <div class="container-img-card">
         <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="">
       </div>
