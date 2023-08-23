@@ -9,6 +9,11 @@
   gap: 20px;
 }
 
+.fa-star{
+  @include secondary-gradient-background();
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .card-pub {
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('ad.png');
   background-position: center;
