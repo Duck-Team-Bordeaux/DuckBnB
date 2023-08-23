@@ -14,6 +14,7 @@
 @import "components/filter";
 @import "components/footer";
 @import "components/navbar";
+@import "components/form";
 
 // CSS pages
 @import "pages/home";
@@ -21,6 +22,7 @@
 // CSS ducks
 @import "ducks/index";
 @import "ducks/show";
+@import "ducks/new";
 
 
 // DECLARATION GLOBALE

@@ -1,0 +1,28 @@
+.form-container {
+  width: 80%;
+  padding: 2em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: $border-radius-l;
+  border: 1px solid $line-color;
+
+.form-item {
+  width: 50%;
+  height: 70vh;
+  padding: 1em;
+}
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $border-radius-l;
+  }
+
+  .simple-form {
+    width: 80%;
+  }
+}
