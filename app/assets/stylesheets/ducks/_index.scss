@@ -49,6 +49,9 @@
   .container-img-card {
     width: 300px;
     height: 300px;
+    border-radius: $border-radius-l;
+    background-color: white;
+
 
     img {
       width: 300px;
