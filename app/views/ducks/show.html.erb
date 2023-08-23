@@ -3,7 +3,7 @@
   <div class="show-duck-box">
     <h1><%= @duck.name %></h1>
     <p><%= @duck.description %></p>
-    <div class="price-item">203$ <span> per night </span></div>
+    <div class="price-item"><%= @duck.price %>$ <span> per night </span></div>
     <div class="show-user-box">
       <%= image_tag "macron.png", class: 'avatar-picture' %>
       <div>
@@ -15,7 +15,7 @@
   </div>
 
   <div class="show-img-box">
-    <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="" class="show-duck-picture">
+    <img src="<%= @duck.url %>" alt="" class="show-duck-picture">
     <i class="fa-regular fa-heart wishlist-icon"></i>
   </div>
 
