@@ -1,16 +1,69 @@
 <%# http://127.0.0.1:3000/users/1/bookings %>
 
-<h1>Booking index bb</h1>
+<%# @ducks => tout les ducks du user car @ducks = Duck.where(user_id: 1) ds controler%>
+<%# @bookings => tout les booking de user car @bookings = @user.bookings ds controler%>
 
-<div>
-
-<% @bookings.each do |booking| %>
-
-<%= booking.user.email %>
-
-<% end %>
-
+<%# <% @bookings.each do |booking| %>
+<%# <%= booking.user.email %>
+<%# <%= @ducks.name %>
+<%# <%= @ducks.price %>
+<%# <% end %>
 
 
 
-</div>
+
+<main>
+
+  <div class="bookings-profile-container">
+    <%= image_tag 'macron.png' %>
+    <h3>Emanuel</h3>
+    <p> 57 bookings </p>
+    <p> 3 ducks </p>
+  </div>
+
+  <div class="booking-dynamic-content-container">
+
+    <div class="booking-dynamic-content-box">
+      <div class="booking-dynamic-content-nav-bar">
+        <p class="booking-dynamic-content-button btn-on" > my bookings </p>
+        <p class="booking-dynamic-content-button"> my ducks </p>
+        <p class="booking-dynamic-content-button"> my whishlist </p>
+      </div>
+    </div>
+
+    <div class="booking-dynamic-content-showbox">
+
+      <div class="my-bookings-card">
+        <div class="card-pic-name-date">
+          <%= image_tag 'trump.png' %>
+          <h3>Trump</h3>
+        </div>
+        <h3 class="my-bookings-card-price"> 655 € </h3>
+      </div>
+
+      <div class="my-bookings-card">
+        <div class="card-pic-name-date">
+          <%= image_tag 'DALL·E 2023-08-21 17.16.49 - A ruber duck in hawai 3D render.png' %>
+          <h3>Plagiste</h3>
+        </div>
+        <h3 class="my-bookings-card-price"> 143 € </h3>
+      </div>
+
+      <div class="my-bookings-card">
+        <div class="card-pic-name-date">
+          <%= image_tag '31001_white_hot_safety_bath_ducky.jpeg' %>
+          <h3>Classic</h3>
+        </div>
+        <h3 class="my-bookings-card-price"> 435 € </h3>
+      </div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+</main>
