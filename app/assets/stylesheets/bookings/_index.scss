@@ -1,3 +1,93 @@
 h1{
 
 }
+
+main{
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 4em;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 4em;
+}
+
+.bookings-profile-container{
+  @include white-rounded-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-height: 300px;
+  img{
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    object-fit: cover;
+    border: 2px solid $primary-color;
+  }
+  p{
+    margin: 0;
+  }
+  h3{
+    margin: 0;
+  }
+}
+
+.booking-dynamic-content{
+
+}
+
+.booking-dynamic-content-nav-bar{
+display: flex;
+justify-content: space-between;
+width: 70%;
+margin: 0 auto;
+}
+
+
+
+.booking-dynamic-content-button{
+  border-radius: 1em;
+  color:  $primary-color;
+  background-color: $white-color;
+  width: 20%;
+  text-align: center;
+  padding: 0.5em 1em 0.5em 1em;
+  cursor: pointer;
+}
+
+.btn-on{
+  color: $white-color;
+  background-color: $primary-color;
+}
+
+.booking-dynamic-content-showbox{
+  @include white-rounded-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-bookings-card{
+padding: 1em;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+  .card-pic-name-date{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  img{
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+    border: 2px solid $line-color;
+  }
+
+  .my-bookings-card-price{
+    font-family: $body-font;
+    color: #67185f;
+  }
+}
