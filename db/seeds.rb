@@ -42,7 +42,7 @@ categories.each do |category|
         p name
         description = new_html_doc.search('._28cEs p').map(&:text).first
         url = new_html_doc.search('._3ggop img').attribute("src").value
-
+        url = url.split('/')[0..4].join('/') if url.split('/').length != 5
         Duck.create!(
           name: name,
           description: description,
