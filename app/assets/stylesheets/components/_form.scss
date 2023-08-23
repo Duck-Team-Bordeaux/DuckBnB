@@ -1,0 +1,31 @@
+.mb-3 {
+  margin-bottom: 1em;
+}
+
+.form-label {
+  font-family: $body-font;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid $line-color;
+  background-color: $background-color;
+  margin-left: 10px;
+  width: 80%;
+}
+
+.btn {
+  height: 5vh;
+  padding-inline: 1vw;
+  border-radius: 3vh;
+  color: $background-color;
+  background-color: $primary-color;
+  border: none;
+  margin: 0 auto;
+}
+
+.optional {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
