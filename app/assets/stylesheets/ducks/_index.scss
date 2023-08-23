@@ -1,9 +1,13 @@
-.index-container{
-  background-color: red;
+.index-container {
   width: 100vw;
+  padding-top: 5vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card-pub {
@@ -27,5 +31,32 @@
     @include h3($white-color);
     font-size: 40px;
     margin: 10px;
+  }
+}
+
+.duck-card {
+  background-color: red;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  .container-img-card {
+    width: 300px;
+    height: 300px;
+
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-l;
+    }
+  }
+
+  .container-info-card {
+    width: 300px;
+    height: 100px;
   }
 }

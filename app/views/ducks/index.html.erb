@@ -1,21 +1,22 @@
 <div class="index-container">
 
-  <div class="card-pub">
+  <%# <div class="card-pub">
     <h3>Everybody</h3>
     <p class="bold"> needs a duck</p>
     <p class="bold">get yours now</p>
-  </div>
+  </div> %>
 
   <% @ducks.each do |duck| %>
-  <div class="duck-card">
-    <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="">
-    <div>
-      <%= duck.name %>
-      <%= duck.category %>
-      <p><%= duck.price %> € per night</p>
+    <div class="duck-card">
+      <div class="container-img-card">
+        <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="">
+      </div>
+      <div class="container-info-card">
+        <p><%= link_to duck.name, ducks_path(duck), :class => 'link' %></p>
+        <p><%= duck.available %></p>
+        <p><%= duck.price %> € per night</p>
+      </div>
     </div>
-  </div>
-
   <% end %>
 
 </div>
