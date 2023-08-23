@@ -12,9 +12,16 @@
         <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="">
       </div>
       <div class="container-info-card">
-        <p><%= link_to duck.name, ducks_path(duck), :class => 'link' %></p>
-        <p><%= duck.available %></p>
-        <p><%= duck.price %> € per night</p>
+        <div class="container-desc-card">
+          <%= link_to duck.name, duck_path(duck), :class => 'link-duckcard' %>
+          <% if duck.available %>
+            <p class="available">Disponible</p>
+          <% else %>
+            <p class="unavailable">Indisponible</p>
+          <% end %>
+          <p><%= duck.price %> € per night</p>
+        </div>
+        <p><%= duck.height %>/10</p>
       </div>
     </div>
   <% end %>

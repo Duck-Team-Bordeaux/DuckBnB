@@ -35,7 +35,6 @@
 }
 
 .duck-card {
-  background-color: red;
   width: 300px;
   height: 400px;
   display: flex;
@@ -56,7 +55,40 @@
   }
 
   .container-info-card {
-    width: 300px;
-    height: 100px;
+    width: 280px;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+    p {
+      margin: 0;
+      font-family: $headers-font;
+      color: $text-color;
+    }
+
+    .container-desc-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+      .link-duckcard {
+        font-family: $headers-font;
+        text-decoration: none;
+        color: $text-color;
+      }
+
+      .available {
+        color: $secondary-color;
+      }
+
+      .unavailable {
+        color: $line-color;
+      }
+    }
   }
 }
