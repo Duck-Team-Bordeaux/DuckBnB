@@ -8,6 +8,10 @@
 @import "config/variables";
 @import "config/mixin";
 
+// Add your own default theme config here still h1
+// (you can rewrite on your page design)
+@import "config/_default_html";
+
 // CSS components
 @import "components/alert";
 @import "components/avatar";
@@ -24,10 +28,18 @@
 @import "ducks/show";
 @import "ducks/new";
 
+// CSS bookings
+@import "bookings/index";
+
+
 
 // DECLARATION GLOBALE
 body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
+  // ***** -> Pour coller le footer en bas de page
+  position: relative;
+  min-height: 100vh;
+  // *****
 }

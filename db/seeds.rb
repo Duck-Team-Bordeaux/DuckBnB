@@ -44,7 +44,7 @@ ducks_array_sonic.each do |duck|
   name = html_doc_oui.search('._2qrJF').map(&:text).first
   description = html_doc_oui.search('._28cEs p').map(&:text).first
 
-  Duck.create(
+  Duck.create!(
     name: name,
     description: description,
     price: 25,
@@ -53,6 +53,6 @@ ducks_array_sonic.each do |duck|
     height: 10,
     width: 10,
     depth: 10,
-    users_id: 1
+    user_id: 1
   )
 end
