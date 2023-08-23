@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_duck, only: %i[show create edit update destroy]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
   end
@@ -30,6 +34,6 @@ class BookingsController < ApplicationController
   private
 
   def set_duck
-    @duck = Find.duck(params[:duck_id])
+    @duck = Duck.find(params[:duck_id])
   end
 end
