@@ -1,4 +1,4 @@
 class Favorite < ApplicationRecord
-  belongs_to :users
-  belongs_to :ducks
+  belongs_to :user
+  belongs_to :duck
 end

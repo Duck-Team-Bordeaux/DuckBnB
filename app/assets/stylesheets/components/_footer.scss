@@ -2,6 +2,8 @@
   width: 100%;
   border-top: 1px solid $line-color;
   border-bottom: 1px solid $line-color;
+  position: absolute;
+  bottom: 0;
 
   .container {
     width: 90%;
