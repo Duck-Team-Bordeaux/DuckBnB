@@ -11,7 +11,7 @@
   <% @ducks.each do |duck| %>
     <div class="duck-cards">
       <%= link_to duck_path(duck), class: 'container-img-card' do %>
-        <img src="<%= duck.url %>" alt="" class="container-img-card">
+        <%= image_tag duck.url %>
       <% end %>
       <div class="container-info-card">
         <div class="container-desc-card">
