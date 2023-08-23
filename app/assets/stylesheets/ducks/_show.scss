@@ -4,6 +4,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  .fa-heart{
+    @include secondary-gradient-background();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .show-duck-box{
   @include white-rounded-box;
   margin-top: 3em;
@@ -14,9 +19,13 @@
   position: relative;
     h1{
       margin: 0;
+      @include h1();
     }
     p{
       @include text-content();
+    }
+    h4{
+      @include h4();
     }
   }
 
@@ -105,8 +114,12 @@
     grid-column: span 2;
     margin-top: 2em;
     h2{
+      @include h2();
       text-align: right;
       margin: 0 0.5em 0 0;
+    }
+    p{
+      @include text-content();
     }
     .show-my-order-grid{
       display: grid;
@@ -121,7 +134,7 @@
   }
 
   .recap-order{
-    @include text-content;
+    @include text-content();
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,6 +154,8 @@
   }
 
   .btn-order{
+    @include link();
+    @include secondary-gradient-background();
     box-shadow: $btn-shadow;
     position: absolute;
     border-radius: 2em;
@@ -157,6 +172,7 @@
     margin-top: 4em;
     h2{
       margin-top: 0;
+      @include h2();
     }
   }
 }
