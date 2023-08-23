@@ -34,8 +34,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_122145) do
     t.integer "depth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.index ["users_id"], name: "index_ducks_on_users_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_ducks_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_122145) do
 
   add_foreign_key "bookings", "ducks", column: "ducks_id"
   add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "ducks", "users", column: "users_id"
+  add_foreign_key "ducks", "users"
   add_foreign_key "favorites", "ducks", column: "ducks_id"
   add_foreign_key "favorites", "users", column: "users_id"
 end
