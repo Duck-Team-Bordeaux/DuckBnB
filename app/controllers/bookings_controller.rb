@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   before_action :set_duck, only: %i[show create edit update destroy]
 
   def index
-    @bookings = Booking.all
+    @user = current_user
+    @bookings = @user.bookings
   end
 
   def new
