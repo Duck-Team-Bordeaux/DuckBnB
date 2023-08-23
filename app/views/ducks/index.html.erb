@@ -10,9 +10,9 @@
 
   <% @ducks.each do |duck| %>
     <div class="duck-cards">
-      <div class="container-img-card">
-        <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="">
-      </div>
+      <%= link_to duck_path(duck), class: 'container-img-card' do %>
+        <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="" class="container-img-card">
+      <% end %>
       <div class="container-info-card">
         <div class="container-desc-card">
           <%= link_to duck.name, duck_path(duck), :class => 'link-duckcard' %>
@@ -23,7 +23,7 @@
           <% end %>
           <p><%= duck.price %> € per night</p>
         </div>
-        <p><%= duck.height %>/10</p>
+        <p><i class="fa-solid fa-star"></i><%= duck.height %></p>
       </div>
     </div>
   <% end %>
