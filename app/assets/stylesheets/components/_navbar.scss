@@ -7,37 +7,40 @@ nav {
   align-items: center;
   justify-content: space-between;
 	border-bottom: 1px solid #ccc;
-}
 
-h1 {
-  background: -webkit-linear-gradient(45deg,rgba(255,80,60,1) 0%, rgba(244,44,255,1)100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: $headers-font;
-  font-size: 3em;
-}
+  .link-nav {
+    background: -webkit-linear-gradient(45deg,rgba(255,80,60,1) 0%, rgba(244,44,255,1)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $headers-font;
+    font-size: 3em;
+  }
 
-#put{
-  font-family: $body-font, sans-serif;
-  font-size: 1em;
-}
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
 
-#pseudo-name{
-  font-family: $body-font, sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-}
+    .put{
+      font-family: $body-font, sans-serif;
+      text-decoration: none;
+      color: $text-color;
+      font-size: 1em;
+    }
 
-.unflex{
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  gap: 10px;
-}
+    #pseudo-name{
+      font-family: $body-font, sans-serif;
+      font-size: 1em;
+      font-weight: bold;
+    }
 
-.img-profile{
-  width: 8%;
-  height: 8%;
-  border-radius: 50%;
-  border: solid 2.5px $primary-color;
+    .img-profile{
+      width: 8%;
+      height: 8%;
+      border-radius: 50%;
+      border: solid 2.5px $primary-color;
+    }
+  }
 }

@@ -1,8 +1,8 @@
 <div class="show-grid-container">
 
   <div class="show-duck-box">
-    <h1> Nom du Duck</h1>
-    <p> Welcome to the fantastic world of a big rubber duck living in a port! Imagine strolling along the quays, when suddenly your eyes land on a surreal sight: a giant rubber duck, larger than life, floating peacefully on the surface of the water. Its bright yellow plastic body glistens in the sun, reflecting the sparks of the wave. </p>
+    <h1><%= @duck.name %></h1>
+    <p><%= @duck.description %></p>
     <div class="price-item">203$ <span> per night </span></div>
     <div class="show-user-box">
       <%= image_tag "macron.png", class: 'avatar-picture' %>
@@ -15,7 +15,7 @@
   </div>
 
   <div class="show-img-box">
-    <%= image_tag "31001_white_hot_safety_bath_ducky.jpeg", class: 'show-duck-picture' %>
+    <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="" class="show-duck-picture">
     <i class="fa-regular fa-heart wishlist-icon"></i>
   </div>
 
