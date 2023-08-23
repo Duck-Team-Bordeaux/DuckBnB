@@ -20,7 +20,6 @@ puts 'Database cleaned'
 # end
 
 puts 'Create ducks...'
-categories = 'sonic'
 url = 'https://www.coincaillerie.com/sonic'
 
 html_file = URI.open(url).read

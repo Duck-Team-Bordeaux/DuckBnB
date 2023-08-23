@@ -12,6 +12,7 @@
 @import "components/alert";
 @import "components/avatar";
 @import "components/duckcard";
+@import "components/filter";
 @import "components/footer";
 @import "components/navbar";
 
@@ -24,40 +25,8 @@
 
 
 // DECLARATION GLOBALE
-body{
- background-color: $background-color;
- margin: 0;
- padding: 0;
-}
-
-
-// ASSIGNATION DES CLASSES TEXTES PAR DEFAULT
-h1{
-  @include h1;
-
-}
-h2{
-  @include h2;
-
-}
-h3{
-  @include h3;
-
-}
-h4{
-  @include h4;
-
-}
-h5{
-  @include h5;
-
-}
-p{
-  @include text-content();
-
-}
-a{
-  @include link();
-
-
+body {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
 }

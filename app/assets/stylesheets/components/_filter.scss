@@ -1,0 +1,40 @@
+.container-filter {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    input {
+      width: 40vw;
+      height: 5vh;
+      border-radius: 3vh;
+      background-color: white;
+      border: none;
+    }
+
+  }
+
+  button {
+    height: 5vh;
+    padding-inline: 1vw;
+    border-radius: 3vh;
+    color: $background-color;
+    background-color: $primary-color;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+  }
+}
