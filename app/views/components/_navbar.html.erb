@@ -2,7 +2,14 @@
   <%= link_to 'duckbnb', ducks_path, :class => 'link-nav' %>
   <div>
     <% if current_user != nil %>
-      <%= link_to 'Mettre mon canard sur duckbnb', new_duck_path, :class => 'put' %>
+
+    <%= link_to new_duck_path do%>
+      <div class="add-my-duck">
+        <i class="fa-solid fa-circle-plus"></i>
+        <p class="put"> Proposer mon duck </p>
+      </div>
+    <% end %>
+
       <%= link_to user_bookings_path(current_user), class: 'container-img-profile' do %>
         <p class='pseudo-name'><%= current_user.email %></p>
         <%= image_tag "img-profile.png", alt:"Photo de profil" %>
