@@ -3,6 +3,9 @@ class DucksController < ApplicationController
 
   def index
     @ducks = Duck.all
+    if params[:query].present?
+      @ducks = @ducks.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
