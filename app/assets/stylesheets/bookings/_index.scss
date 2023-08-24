@@ -9,6 +9,7 @@ main{
   width: 70%;
   margin: 0 auto;
   padding-top: 4em;
+  min-height: 80vh;
 }
 
 .bookings-profile-container{
@@ -72,13 +73,19 @@ padding: 1em;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+position: relative;
+
 
   .card-pic-name-date{
     width: 400px;
     display: flex;
     flex-direction: row;
     gap: 1em;
+    position: relative;
+    margin-left: 1em;
+    max-width: 20em;
   }
+
   img{
     border-radius: 50%;
     width: 6em;
@@ -87,8 +94,33 @@ justify-content: space-between;
     border: 2px solid $line-color;
   }
 
+  .card-pic-name{
+    margin-top: 1em;
+
+  }
+
+  .card-pic-date{
+    position: absolute;
+    bottom: 1.5em;
+    left:0 ;
+  }
+
   .my-bookings-card-price{
+    display: flex;
     font-family: $body-font;
     color: #67185f;
+    flex-grow: 1;
+    min-width: 4em;
   }
+
+  &::after{
+    display: block;
+    content: " ";
+    width: 95%;
+    height: 0.1em;
+    background-color: $line-color;
+    position: absolute;
+    bottom: 0;
+  }
+
 }
