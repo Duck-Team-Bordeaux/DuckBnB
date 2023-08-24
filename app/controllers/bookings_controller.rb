@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @ducks = Duck.where(user_id: 1)
+    @ducks = Duck.where(params[:user_id])
     # @bookings = @user.bookings
   end
 
