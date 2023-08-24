@@ -3,6 +3,7 @@
   margin: 2em auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 80px;
 
   .fa-heart{
     @include secondary-gradient-background();
@@ -164,6 +165,7 @@
     right: 40%;
     text-align: center;
     cursor: pointer;
+    color: white;
   }
 
   .show-box-review{

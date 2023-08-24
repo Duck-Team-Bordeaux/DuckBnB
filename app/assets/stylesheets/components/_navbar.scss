@@ -7,9 +7,13 @@ nav {
   align-items: center;
   justify-content: space-between;
 	border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
 
   .link-nav {
-    background: -webkit-linear-gradient(45deg,rgba(255,80,60,1) 0%, rgba(244,44,255,1)100%);
+    @include prymary-gradient-background();
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: $headers-font;
