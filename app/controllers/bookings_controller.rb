@@ -36,4 +36,8 @@ class BookingsController < ApplicationController
   def set_duck
     @ducks = Duck.where(params['user_id'])
   end
+
+  def set_booking_user
+    @booking_user = User.find()
+  end
 end

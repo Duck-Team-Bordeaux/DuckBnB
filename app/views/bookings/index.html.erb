@@ -1,68 +1,57 @@
 <%# http://127.0.0.1:3000/users/1/bookings %>
 
-<%# @ducks => tout les ducks du user car @ducks = Duck.where(user_id: 1) ds controler%>
-<%# @bookings => tout les booking de user car @bookings = @user.bookings ds controler%>
-
-<%# <% @bookings.each do |booking| %>
-<%# <%= booking.user.email %>
-<%# <%= @ducks.name %>
-<%# <%= @ducks.price %>
-<%# <% end %>
-
-
 <main>
 
   <div class="bookings-profile-container">
     <%= image_tag 'macron.png' %>
-    <h3><%= current_user.email %></h3>
-    <p> <%= Booking.all.where(user_id: current_user.id).count %> bookings </p>
-    <p> <%= Duck.all.where(user_id: current_user.id).count %> ducks </p>
+    <div class="user-name">
+      <span><%= current_user.first_name %></span>
+      <span><%= current_user.last_name %></span>
+    </div>
+    <p class="info-user"> <%= Booking.all.where(user_id: current_user.id).count %> reservations </p>
+    <p class="info-user"> <%= Duck.all.where(user_id: current_user.id).count %> ducks en location </p>
+
+    <div class="btn-user-box">
+      <%= link_to '/users/edit' do %>
+        <div class="btn-user-profil"><p > Modifier mon profil </p></div>
+      <% end %>
+      <%= link_to '/users/sign_out' do %>
+        <div class="btn-user-profil"><p > Me déconecter </p></div>
+      <% end %>
+    </div>
+
   </div>
 
+  <%# ---- DEBUT booking-dynamic-content-container ---- %>
   <div class="booking-dynamic-content-container">
 
-
     <div class="booking-dynamic-content-nav-bar">
-      <div class="booking-dynamic-content-button btn-on"><p > my bookings </p></div>
-      <div class="booking-dynamic-content-button"><p > my bookings </p></div>
-      <div class="booking-dynamic-content-button"><p > my bookings </p></div>
+      <div class="booking-dynamic-content-button btn-on"><p > mes reservations </p></div>
+      <div class="booking-dynamic-content-button"><p > mes ducks </p></div>
+      <div class="booking-dynamic-content-button"><p > ma wishlist </p></div>
     </div>
 
-
+    <%# ---- DEBUT booking-dynamic-content-showbox ----  %>
     <div class="booking-dynamic-content-showbox">
 
-      <%# ---------------------- DEBUT CARD ---------------------- %>
-
-      <%# <% @bookings.each do |booking| %>
-      <%# <%= booking.user.email %>
-      <%# <%= @ducks.name %>
-      <%# <%= @ducks.price %>
-      <%# <% end %>
-
-
-
-
-    <% @bookings.each do |booking| %>
-
-      <div class="my-bookings-card">
-        <%= image_tag booking.duck.url %>
-        <div class="card-pic-name-date">
-          <h5 class="card-pic-name">  <%= booking.duck.name %> </h5>
-          <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
+      <%# ---- DEBUT CARD ---- %>
+      <% @bookings.each do |booking| %>
+        <div class="my-bookings-card">
+          <%= image_tag booking.duck.url %>
+          <div class="card-pic-name-date">
+            <h4 class="card-pic-name">  <%= booking.duck.name %> </h4>
+            <p class="card-pic-date"><i class="fa-solid fa-calendar-days"></i> <span><%= (1..15).to_a.sample %> sept</span> - <span><%= (15..30).to_a.sample %> sept</span> <span>2023</span></p>
+            <p class="card-pic-loc"><i class="fa-solid fa-user"></i> Proprietaire : <span> <%= booking.user[:first_name] %> <%= booking.user[:last_name] %> </span> </p>
+          </div>
+          <h4 class="my-bookings-card-price"> <%= booking.duck.price %>€</h4>
+        <%# ---- FIN CARD ---- %>
         </div>
-        <h4 class="my-bookings-card-price"> <%= booking.duck.price %>€</h4>
-      </div>
-    <% end %>
-    <%# ---------------------- FIN CARD ----------------------  %>
+      <% end %>
 
-
-
-
-
-
-    <%# ---------------------- FIN booking-dynamic-content-showbox ----------------------  %>
+    <%# ---- FIN booking-dynamic-content-showbox ----  %>
     </div>
-  <%# ---------------------- FIN booking-dynamic-content-container ----------------------  %>
+
+  <%# ---- FIN booking-dynamic-content-container ---- %>
   </div>
 
 </main>
