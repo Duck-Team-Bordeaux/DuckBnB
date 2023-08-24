@@ -1,10 +1,9 @@
 class BookingsController < ApplicationController
-  before_action :set_duck, only: %i[show create edit update destroy]
+  before_action :set_duck, only: %i[index show create edit update destroy]
 
   def index
     @user = current_user
-    @ducks = Duck.where(params[:user_id])
-    # @bookings = @user.bookings
+    @bookings = Booking.all
   end
 
   def create
@@ -36,6 +35,6 @@ class BookingsController < ApplicationController
   end
 
   def set_duck
-    @duck = Duck.find(params[:duck_id])
+    @duck = Duck.find(params['user_id'])
   end
 end
