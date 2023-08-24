@@ -5,11 +5,6 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 80px;
 
-  .fa-heart{
-    @include secondary-gradient-background();
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   .show-duck-box{
   @include white-rounded-box;
   margin-top: 3em;
@@ -31,8 +26,8 @@
   }
 
   .price-item{
-    background-color: $secondary-color;
-    padding: 0 0.5em 0 1em;
+    background-color: $primary-color;
+    padding: 0 0.8em 0 1em;
     display: flex;
     gap: 0.5em;
     justify-content: center;
@@ -59,7 +54,7 @@
     border-radius: 2em;
     object-fit: cover;
     position: relative;
-    border: solid 0.25em $secondary-color;
+    outline: solid 10px $background-color;
     position: relative;
   }
 
@@ -71,9 +66,9 @@
     align-items: center;
 
     div{
-      padding: 1em 3em;
-      margin-left: -1em;
-      background-color: $white-color;
+      padding: 1em 3em 1em 4em;
+      margin-left: -3em;
+      background-color: #ffff;
       height: fit-content;
       border-radius: 0 2em 2em 0;
 
@@ -95,7 +90,7 @@
     width: 10em;
     height: 10em;
     object-fit: cover;
-    border: 0.25em solid $primary-color;
+    border: 10px solid $background-color;
     z-index: 1;
     cursor: pointer;
   }
@@ -105,16 +100,20 @@
     position: absolute;
     right: 0.5em;
     top: 0.5em;
+    color: white;
+    filter: drop-shadow(0 0 0.5em $primary-color);
     cursor: pointer;
     &:hover{
-      filter: drop-shadow(0 0 0.25em $tertiary-color);
+      filter: drop-shadow(-1px 1px 16px #fff);
+      color: $primary-color;
     }
   }
 
   .show-box-order{
     @include white-rounded-box;
     grid-column: span 2;
-    margin-top: 2em;
+    margin-top: 4em;
+    margin-bottom: 2em;
     h2{
       @include h2();
       text-align: right;
@@ -157,17 +156,31 @@
 
   .btn-order{
     @include link();
-    @include secondary-gradient-background();
+    @include prymary-gradient-background();
     box-shadow: $btn-shadow;
     position: absolute;
     border-radius: 2em;
     padding: 1em 1em 1em 1em;
-    width: 20%;
-    right: 40%;
+    width: 30%;
+    right: 33%;
     text-align: center;
     cursor: pointer;
-    color: white;
     font-weight: 700;
+    font-size: 1.2em;
+    .txt{
+      color: white;
+    }
+
+    &:hover{
+      outline: 2px solid $tertiary-color;
+      background: $white-color;
+      .txt{
+        @include prymary-gradient-background;
+        @include font-gradient;
+        color: $primary-color;
+      }
+    }
+
   }
 
   .show-box-review{
