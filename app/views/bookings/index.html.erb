@@ -10,61 +10,68 @@
 <%# <% end %>
 
 
-
-
 <main>
 
   <div class="bookings-profile-container">
     <%= image_tag 'macron.png' %>
-    <h3>Emanuel</h3>
-    <p> 57 bookings </p>
-    <p> 3 ducks </p>
+    <h3>Emmanuel</h3>
+    <p> 57 Réservations </p>
+    <p> 3 canards </p>
     <%= button_to "logout", destroy_user_session_path, method: :delete  %>
   </div>
 
   <div class="booking-dynamic-content-container">
 
-    <div class="booking-dynamic-content-box">
-      <div class="booking-dynamic-content-nav-bar">
-        <p class="booking-dynamic-content-button btn-on" > my bookings </p>
-        <p class="booking-dynamic-content-button"> my ducks </p>
-        <p class="booking-dynamic-content-button"> my whishlist </p>
-      </div>
+
+    <div class="booking-dynamic-content-nav-bar">
+      <p class="booking-dynamic-content-button btn-on" > my bookings </p>
+      <p class="booking-dynamic-content-button"> my ducks </p>
+      <p class="booking-dynamic-content-button"> my whishlist </p>
     </div>
+
 
     <div class="booking-dynamic-content-showbox">
 
-      <div class="my-bookings-card">
-        <div class="card-pic-name-date">
-          <%= image_tag 'trump.png' %>
-          <h3>Trump</h3>
-        </div>
-        <h3 class="my-bookings-card-price"> 655 € </h3>
-      </div>
+      <%# ---------------------- DEBUT CARD ---------------------- %>
+
+      <%# <% @bookings.each do |booking| %>
+      <%# <%= booking.user.email %>
+      <%# <%= @ducks.name %>
+      <%# <%= @ducks.price %>
+      <%# <% end %>
+
+
+
+
+    <% @bookings.each do |booking| %>
 
       <div class="my-bookings-card">
+
+        <%= image_tag 'trump.png' %>
+
         <div class="card-pic-name-date">
-          <%= image_tag 'DALL·E 2023-08-21 17.16.49 - A ruber duck in hawai 3D render.png' %>
-          <h3>Plagiste</h3>
+
+
+          <h5 class="card-pic-name">  <%= booking.duck.name %> </h5>
+
+
+          <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
         </div>
-        <h3 class="my-bookings-card-price"> 143 € </h3>
+
+        <h3 class="my-bookings-card-price"> <%= booking.duck.price %> </h3>
+
       </div>
-
-      <div class="my-bookings-card">
-        <div class="card-pic-name-date">
-          <%= image_tag '31001_white_hot_safety_bath_ducky.jpeg' %>
-          <h3>Classic</h3>
-        </div>
-        <h3 class="my-bookings-card-price"> 435 € </h3>
-      </div>
+    <% end %>
+    <%# ---------------------- FIN CARD ----------------------  %>
 
 
 
 
 
 
+    <%# ---------------------- FIN booking-dynamic-content-showbox ----------------------  %>
     </div>
-
+  <%# ---------------------- FIN booking-dynamic-content-container ----------------------  %>
   </div>
 
 </main>

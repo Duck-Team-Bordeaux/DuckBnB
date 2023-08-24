@@ -9,4 +9,5 @@ class User < ApplicationRecord
 
   has_many :bookings
   has_many :favorites
+  has_many :ducks, through: :bookings
 end
