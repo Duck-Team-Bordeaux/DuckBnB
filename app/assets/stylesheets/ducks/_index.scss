@@ -99,3 +99,19 @@
     }
   }
 }
+
+.btn-map {
+  height: 40px;
+  width: 180px;
+  margin-bottom: 60px;
+  border-radius: 3vh;
+  color: $background-color;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 12;
+}

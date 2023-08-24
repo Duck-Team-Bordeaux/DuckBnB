@@ -41,6 +41,10 @@ class DucksController < ApplicationController
     redirect_to ducks_path, status: :see_other
   end
 
+  def map
+    @ducks = Duck.all
+  end
+
   private
 
   def duck_params
