@@ -1,8 +1,8 @@
 <%= simple_form_for duck do |f| %>
-  <%= f.input :name , label:"Nom"%>
+  <%= f.input :name , label:"Nom", input_html: { class: "duck-form" }%>
   <%= f.input :description%>
   <%= f.input :url %>
   <%= f.input :price , label:"Prix"%>
   <%= f.input :category , label:"Catégorie"%>
-  <%= f.submit 'Ajoute ton canard !'  %>
+  <%= f.submit 'Ajoute ton canard !', class: "toto"  %>
 <% end %>

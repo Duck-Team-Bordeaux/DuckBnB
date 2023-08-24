@@ -51,7 +51,7 @@ categories.each do |category|
         url = url.split('/')[0..4].join('/') if url.split('/').length != 5
         Duck.create!(
           name: name,
-          description: description,
+          description: description.blank? ? "Fausse description" : description,
           price: (10..25).to_a.sample,
           category: category,
           available: [true, false].sample,
