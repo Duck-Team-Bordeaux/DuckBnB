@@ -7,7 +7,8 @@
     <div class="show-user-box">
       <%= image_tag "macron.png", class: 'avatar-picture' %>
       <div>
-        <h4>Manu</h4>
+        <p>Ce canard appartient à :</p>
+        <h4><%= @duck.user.first_name %></h4>
         <p><%= @duck.user.email %></p>
         <p>57 réservations <p>
         <p>3 canards <p>

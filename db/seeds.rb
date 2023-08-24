@@ -4,21 +4,48 @@ require 'nokogiri'
 puts 'Cleaning up database...'
 Duck.destroy_all
 Booking.destroy_all
+User.destroy_all
 puts 'Database cleaned'
 
-# 5.times do
-#   Duck.create(
-#     name: 'Gerard',
-#     description: 'I am a little cute rubber duck',
-#     price: 25,
-#     category: 'sonic',
-#     available: true,
-#     height: 10,
-#     width: 10,
-#     depth: 10,
-#     user_id: 1
-#   )
-# end
+User.create(
+  first_name: 'Gerard',
+  last_name: 'Bernard',
+  email: 'gg@gmail.com',
+  location: 'Tour Eiffel',
+  password: 'qwertyuiop'
+)
+
+User.create(
+  first_name: 'Jo-Willfried',
+  last_name: 'Tsonga',
+  email: 'jojo@gmail.com',
+  location: 'Merignac',
+  password: 'qwertyuiop'
+)
+
+User.create(
+  first_name: 'Mamie',
+  last_name: 'Gateau',
+  email: 'mamiegateau@gmail.com',
+  location: '107 Cr Balguerie Stuttenberg, 33300 Bordeaux',
+  password: 'qwertyuiop'
+)
+
+User.create(
+  first_name: 'Emmanuel',
+  last_name: 'Macron',
+  email: 'manu@gmail.com',
+  location: 'Av. des Champs-Élysées, 75008 Paris',
+  password: 'qwertyuiop'
+)
+
+User.create(
+  first_name: 'Bob',
+  last_name: 'Lebricoleur',
+  email: 'boblebricoleur@gmail.com',
+  location: '118 Rue du Jardin public, 33300 Bordeaux',
+  password: 'qwertyuiop'
+)
 
 puts "Si cela n'est pas fait"
 puts '=> va creer un utilisateur'
@@ -49,6 +76,7 @@ categories.each do |category|
         description = new_html_doc.search('._28cEs p').map(&:text).first
         url = new_html_doc.search('._3ggop img').attribute("src").value
         url = url.split('/')[0..4].join('/') if url.split('/').length != 5
+
         Duck.create!(
           name: name,
           description: description.blank? ? "Fausse description" : description,
@@ -58,7 +86,7 @@ categories.each do |category|
           height: 10,
           width: 10,
           depth: 10,
-          user_id: 1,
+          user_id: ((User.last.id - 4)..User.last.id).to_a.sample,
           rating: (1..10).to_a.sample,
           url: url
         )
@@ -76,22 +104,9 @@ ducks_id = (0..33).step(random_bookings_seed).to_a.shuffle
 p "sufling the bookings id => #{ducks_id}"
 ducks_id.each do |id|
   Booking.create(
-    user_id: 1,
+    user_id: ((User.last.id - 4)..User.last.id).to_a.sample,
     duck_id: id
   )
+  puts "Booking create!"
 end
 p "#{ducks_id.length} new random bookings has been created ! (for user_id:1)"
-
-
-
-#   Duck.create(
-#     name: 'Gerard',
-#     description: 'I am a little cute rubber duck',
-#     price: 25,
-#     category: 'sonic',
-#     available: true,
-#     height: 10,
-#     width: 10,
-#     depth: 10,
-#     user_id: 1
-#   )
