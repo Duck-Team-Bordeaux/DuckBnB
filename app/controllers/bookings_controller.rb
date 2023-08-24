@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @bookings = Booking.all
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def create
@@ -15,12 +15,10 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
-
-  end
+  def edit() end
 
   def update
-    @booking.update()
+    @booking.update
   end
 
   def destroy
@@ -35,6 +33,6 @@ class BookingsController < ApplicationController
   end
 
   def set_duck
-    @duck = Duck.find(params['user_id'])
+    @ducks = Duck.where(params['user_id'])
   end
 end
