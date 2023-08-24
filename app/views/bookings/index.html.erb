@@ -14,10 +14,9 @@
 
   <div class="bookings-profile-container">
     <%= image_tag 'macron.png' %>
-    <h3>Emmanuel</h3>
-    <p> 57 Réservations </p>
-    <p> 3 canards </p>
-    <%= button_to "logout", destroy_user_session_path, method: :delete  %>
+    <h3><%= current_user.email %></h3>
+    <p> <%= Booking.all.where(user_id: current_user.id).count %> bookings </p>
+    <p> <%= Duck.all.where(user_id: current_user.id).count %> ducks </p>
   </div>
 
   <div class="booking-dynamic-content-container">
@@ -58,7 +57,7 @@
           <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
         </div>
 
-        <h3 class="my-bookings-card-price"> <%= booking.duck.price %>€</h3>
+        <h4 class="my-bookings-card-price"> <%= booking.duck.price %>€</h4>
 
       </div>
     <% end %>
