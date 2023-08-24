@@ -1,7 +1,7 @@
 <div class="index-container">
   <div class="form-container">
     <div class="form-item">
-      <%= render '/components/form', duck: @duck %>
+      <%= render '/components/form', duck: [@user, @duck] %>
     </div>
     <div class="form-item">
       <%= image_tag 'form-cover.png' %>
