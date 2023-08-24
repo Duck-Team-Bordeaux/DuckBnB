@@ -14,20 +14,24 @@ textarea {
   width: 80%;
 }
 
-.btn {
-  height: 5vh;
-  padding-inline: 1vw;
-  border-radius: 3vh;
-  color: $background-color;
-  background-color: $primary-color;
-  border: none;
-  width: 40%;
-}
-
-.optional {
+.optional, .required {
   display: flex;
   justify-content: space-between;
   height: 5vh;
   font-family: $body-font;
   margin-bottom: 1em;
+}
+
+.required {
+  color: $eror-color;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 3vh;
+  color: $background-color;
+  background-color: $primary-color;
+  border: none;
+  width: 30%;
+  margin: 8px 35%;
 }
