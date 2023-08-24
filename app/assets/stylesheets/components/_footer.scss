@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  border-top: 1px solid $line-color;
-  border-bottom: 1px solid $line-color;
+  border-top: 1px solid $primary-color;
+  border-bottom: 1px solid $primary-color;
   bottom: 0;
 
   .container {
@@ -10,11 +10,12 @@
   }
 
   p {
-    @include text-content($line-color);
+    @include text-content($primary-color);
   }
 
   .bold {
-    @include text-content-bold($line-color)
+    @include text-content-bold($primary-color);
+    margin-right: 1em;
   }
 }
 
