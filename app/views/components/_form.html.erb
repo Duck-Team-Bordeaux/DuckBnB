@@ -1,10 +1,8 @@
 <%= simple_form_for duck do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :category %>
-  <%= f.input :height %>
-  <%= f.input :width %>
-  <%= f.input :depth %>
+  <%= f.input :name , label:"Nom"%>
+  <%= f.input :description%>
+  <%= f.input :url %>
+  <%= f.input :price , label:"Prix"%>
+  <%= f.input :category , label:"Catégorie"%>
   <%= f.button :submit, 'Ajoute ton canard !'  %>
 <% end %>
