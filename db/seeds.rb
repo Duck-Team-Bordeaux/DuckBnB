@@ -3,6 +3,7 @@ require 'nokogiri'
 
 puts 'Cleaning up database...'
 Duck.destroy_all
+Booking.destroy_all
 puts 'Database cleaned'
 
 # 5.times do

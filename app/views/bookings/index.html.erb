@@ -24,9 +24,9 @@
 
 
     <div class="booking-dynamic-content-nav-bar">
-      <p class="booking-dynamic-content-button btn-on" > my bookings </p>
-      <p class="booking-dynamic-content-button"> my ducks </p>
-      <p class="booking-dynamic-content-button"> my whishlist </p>
+      <div class="booking-dynamic-content-button btn-on"><p > my bookings </p></div>
+      <div class="booking-dynamic-content-button"><p > my bookings </p></div>
+      <div class="booking-dynamic-content-button"><p > my bookings </p></div>
     </div>
 
 
@@ -58,7 +58,7 @@
           <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
         </div>
 
-        <h3 class="my-bookings-card-price"> <%= booking.duck.price %> </h3>
+        <h3 class="my-bookings-card-price"> <%= booking.duck.price %>€</h3>
 
       </div>
     <% end %>
