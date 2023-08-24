@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= render 'components/navbar' %>
+    <%= render 'components/navbar' unless @hide_navbar == true %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'components/footer' %>
+    <%= render 'components/footer' unless @hide_footer == true%>
   </body>
 </html>

@@ -9,6 +9,7 @@ main{
   width: 70%;
   margin: 0 auto;
   padding-top: 4em;
+  min-height: 80vh;
 }
 
 .bookings-profile-container{
@@ -41,23 +42,31 @@ display: flex;
 justify-content: space-between;
 width: 70%;
 margin: 0 auto;
+margin-bottom: 1em;
+gap: 1em;
 }
 
 
 
 .booking-dynamic-content-button{
-  border-radius: 1em;
-  color:  $primary-color;
-  background-color: $white-color;
-  width: 20%;
-  text-align: center;
+  border-radius: 3em;
+  width: 10em;
+  height: 3em;
   padding: 0.5em 1em 0.5em 1em;
   cursor: pointer;
+  background-color: $white-color;
+  text-align: center;
+  p {
+  color:  $text-color;
+  font-family: $headers-font;
+  }
 }
 
 .btn-on{
-  color: $white-color;
-  background-color: $primary-color;
+  @include prymary-gradient-background;
+  p{
+    color: $white-color;
+  }
 }
 
 .booking-dynamic-content-showbox{
@@ -71,13 +80,19 @@ padding: 1em;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+position: relative;
+
 
   .card-pic-name-date{
     width: 400px;
     display: flex;
     flex-direction: row;
     gap: 1em;
+    position: relative;
+    margin-left: 1em;
+    max-width: 20em;
   }
+
   img{
     border-radius: 50%;
     width: 6em;
@@ -86,8 +101,33 @@ justify-content: space-between;
     border: 2px solid $line-color;
   }
 
+  .card-pic-name{
+    margin-top: 1em;
+
+  }
+
+  .card-pic-date{
+    position: absolute;
+    bottom: 1.5em;
+    left:0 ;
+  }
+
   .my-bookings-card-price{
+    display: flex;
     font-family: $body-font;
     color: #67185f;
+    flex-grow: 1;
+    min-width: 4em;
   }
+
+  &::after{
+    display: block;
+    content: " ";
+    width: 95%;
+    height: 0.1em;
+    background-color: $line-color;
+    position: absolute;
+    bottom: 0;
+  }
+
 }

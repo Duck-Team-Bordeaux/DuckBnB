@@ -31,15 +31,27 @@
 // CSS bookings
 @import "bookings/index";
 
+// CSS registration
+@import "registration/new";
+
+// CSS registration
+@import "session/new";
+
 
 
 // DECLARATION GLOBALE
 body {
   background-color: $background-color;
   margin: 0;
-  padding: 0;
+  // padding: 0;
   // ***** -> Pour coller le footer en bas de page
-  position: relative;
+  // position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   // *****
+}
+
+.footer {
+  margin-top: 20px;
 }

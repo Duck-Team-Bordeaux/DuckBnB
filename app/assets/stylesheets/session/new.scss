@@ -1,0 +1,53 @@
+h2 {
+  text-align: center;
+}
+
+#error_explanation {
+  font-family: $body-font;
+}
+
+.sign-in-container {
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid $line-color;
+  padding: 24px;
+  border-radius: $border-radius-l;
+
+  input {
+    width: 96%;
+  }
+
+  button {
+    border-radius: 3vh;
+    color: $background-color;
+    background-color: $primary-color;
+    border: none;
+    padding: 10px 15px;
+    font-family: $body-font;
+    font-size: 1rem;
+    margin-top: 14px;
+  }
+
+  a {
+    border-radius: 3vh;
+    color: $background-color;
+    background-color: $primary-color;
+    border: none;
+    padding: 5px 10px;
+  }
+
+}
+
+.field {
+  font-family: $body-font;
+  height: 50px;
+}
+
+.check-box {
+  display: flex;
+  font-family: $body-font;
+
+  input {
+    width: 3%;
+  }
+}

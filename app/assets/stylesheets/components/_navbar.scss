@@ -25,13 +25,14 @@ nav {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 
     .put{
       font-family: $body-font, sans-serif;
       text-decoration: none;
       color: $text-color;
       font-size: 1em;
+      margin-right: 1em;
     }
 
     .container-img-profile {
@@ -39,6 +40,7 @@ nav {
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: end;
       gap: 20px;
 
       .pseudo-name{
@@ -48,10 +50,11 @@ nav {
       }
 
       img {
-        height: 15%;
-        width: 15%;
+        height: 2em;
+        width: 2em;
         border-radius: 50%;
         border: solid 2.5px $primary-color;
+        object-fit: cover;
       }
     }
   }
