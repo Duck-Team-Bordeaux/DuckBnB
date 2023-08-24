@@ -16,25 +16,30 @@ main{
   @include white-rounded-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5em;
-  max-height: 300px;
+  max-height: 15%;
+  position: relative;
+  margin-top: 6em;
+  padding-top: 2.7em;
   img{
     border-radius: 50%;
     width: 8em;
     height: 8em;
     object-fit: cover;
     border: 2px solid $primary-color;
+    position: absolute;
+    transform: translateX(0%);
+    top: -6em;
   }
   p{
     margin: 0;
   }
   h3{
     margin: 0;
+    font-size: 1.5em;
+    font-family: $body-font;
   }
-}
-
-.booking-dynamic-content{
-
 }
 
 .booking-dynamic-content-nav-bar{
@@ -45,8 +50,6 @@ margin: 0 auto;
 margin-bottom: 1em;
 gap: 1em;
 }
-
-
 
 .booking-dynamic-content-button{
   border-radius: 3em;
@@ -69,7 +72,7 @@ gap: 1em;
 
 .btn-on{
   position: relative;
-  border: solid 4px $primary-color;
+  border: solid 2px $primary-color;
   p{
     @include prymary-gradient-background;
     @include font-gradient;
@@ -81,6 +84,7 @@ gap: 1em;
   @include white-rounded-box;
   display: flex;
   flex-direction: column;
+  padding-bottom: 1em;
 }
 
 .my-bookings-card{
@@ -106,7 +110,7 @@ position: relative;
     width: 6em;
     height: 6em;
     object-fit: cover;
-    border: 2px solid $line-color;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.1);
   }
 
   .card-pic-name{
@@ -132,10 +136,15 @@ position: relative;
     display: block;
     content: " ";
     width: 95%;
-    height: 0.1em;
+    height: 1px;
     background-color: $line-color;
     position: absolute;
     bottom: 0;
   }
 
+  &:last-child {
+    &::after{
+      display: none;
+    }
+  }
 }
