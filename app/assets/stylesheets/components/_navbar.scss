@@ -25,7 +25,7 @@ nav {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     .put{
       font-family: $body-font, sans-serif;
@@ -34,17 +34,25 @@ nav {
       font-size: 1em;
     }
 
-    #pseudo-name{
-      font-family: $body-font, sans-serif;
-      font-size: 1em;
-      font-weight: bold;
-    }
+    .container-img-profile {
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
 
-    .img-profile{
-      width: 8%;
-      height: 8%;
-      border-radius: 50%;
-      border: solid 2.5px $primary-color;
+      .pseudo-name{
+        font-family: $body-font, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+      }
+
+      img {
+        height: 15%;
+        width: 15%;
+        border-radius: 50%;
+        border: solid 2.5px $primary-color;
+      }
     }
   }
 }

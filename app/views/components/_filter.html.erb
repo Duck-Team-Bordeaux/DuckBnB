@@ -1,10 +1,14 @@
 <div class="container-filter">
-  <div>
-    <input type="text">
-    <button><%= image_tag("search.svg", {:style => "width:15px;"}) %></button>
-  </div>
+  <%= form_with url: ducks_path, method: :get, class: "search-bar" do %>
+    <%= text_field_tag :query,
+        params[:query],
+        class: "input-search",
+        placeholder: "Trouve ton canard..."
+      %>
+    <%= submit_tag "Rechercher", name: "", class: "button-search" %>
+  <% end %>
   <button>
     <%= image_tag("filter.svg", {:style => "width:15px;"}) %>
-    <p>FILTRES</p>
+    <p>Filtres</p>
   </button>
 </div>

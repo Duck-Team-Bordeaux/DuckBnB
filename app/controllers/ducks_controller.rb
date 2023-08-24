@@ -1,12 +1,15 @@
 class DucksController < ApplicationController
-  before_action :set_duck, only: %i[show create edit update destroy]
+  before_action :set_duck, only: %i[show edit update destroy]
 
   def index
     @ducks = Duck.all
+    if params[:query].present?
+      @ducks = @ducks.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
-    @duck = Duck.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -15,18 +18,22 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.new(duck_params)
-    if @duck.save
+    @duck.user_id = current_user.id
+    if @duck.save!
       redirect_to duck_path(@duck)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def edit
-  end
+  def edit() end
 
   def update
-    @duck.update(duck_params)
+    if @duck.update(duck_params)
+      redirect_to duck_path(@duck)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -34,10 +41,14 @@ class DucksController < ApplicationController
     redirect_to ducks_path, status: :see_other
   end
 
+  def map
+    @ducks = Duck.all
+  end
+
   private
 
   def duck_params
-    params.require(:ducks).permit(:name, :description, :price, :category, :height, :width, :depth)
+    params.require(:duck).permit(:name, :description, :url, :price, :category)
   end
 
   def set_duck
