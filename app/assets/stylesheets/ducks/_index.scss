@@ -10,10 +10,11 @@
   gap: 20px;
 }
 
-.fa-star{
-  @include secondary-gradient-background();
+.rating{
+  @include prymary-gradient-background();
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 6px;
 }
 .card-pub {
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('ad.png');
@@ -46,6 +47,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  position: relative;
+
+
 
   .container-img-card {
     width: 300px;
@@ -89,24 +93,30 @@
         color: $text-color;
       }
 
+      .parnuit{
+        font-family: $body-font;
+      }
+
       .available {
-        color: $secondary-color;
+        color: $text-color;
+        font-family: $body-font;
       }
 
       .unavailable {
-        color: $line-color;
+        color: $eror-color;
+        font-family: $body-font;
       }
     }
   }
 }
 
 .btn-map {
-  height: 40px;
-  width: 180px;
+  height: 3em;
+  width: 15em;
+  font-size: 1.2em;
+  font-weight: 700;
   margin-bottom: 60px;
-  border-radius: 3vh;
-  color: $background-color;
-  background-color: $primary-color;
+  border-radius: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,4 +124,39 @@
   position: fixed;
   bottom: 0;
   z-index: 12;
+  color: white;
+  box-shadow: 0px 0px 16px 8px rgba(225, 46, 114,0.5);
+  transform: translateX();
+  @include prymary-gradient-background();
+  .fa-location-dot{
+    margin-right: 6px;
+  }
+  .txt{
+    color: white;
+  }
+  &:hover{
+    outline: 2px solid $tertiary-color;
+    background: $white-color;
+    .fa-location-dot{
+      @include prymary-gradient-background;
+      @include font-gradient;
+    }
+    .txt{
+      @include prymary-gradient-background;
+      @include font-gradient;
+    }
+  }
+
+  // &:hover{
+  //   outline: 2px solid $tertiary-color;
+  //   background: $white-color;
+  //   .txt{
+  //     @include prymary-gradient-background;
+  //     @include font-gradient;
+  //     color: $primary-color;
+  //   }
+  // }
+
+
+
 }
