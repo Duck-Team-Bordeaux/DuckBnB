@@ -6,8 +6,9 @@
   margin-top: 1vw;
 
   .img-go {
-    width: 20%;
+    width: 70%;
     height: 20%;
+    margin-top: 3em;
   }
   h1{
     @include prymary-gradient-background();
@@ -16,6 +17,7 @@
     font-family: $headers-font;
     font-size: 3em;
     font-weight: 700;
+    display: none;
   }
   .btn-go{
     @include link();
@@ -29,29 +31,39 @@
     cursor: pointer;
     color: white;
     font-weight: 700;
+    margin-top: 4em;
   }
-  .image-dev{
+  .cont-dev{
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 4em;
+    width: 40%;
+    .info-dev{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      width: 30em;
+
+      .img-developpeur{
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+      }
+
+      p{
+        padding-right: 20px;
+        padding-left: 15px;
+        font-size: 2em;
+        color: $primary-color;
+        margin-top: 8px;
+        padding-top: 0em;
+      }
+
+    }
   }
 
-  .img-developpeur{
-    width: 16%;
-    height: 16%;
-    border-radius: 50%;
-  }
 
-  .info-dev{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-  }
-
-  p{
-    padding-right: 20px;
-    padding-left: 15px;
-  }
 }
