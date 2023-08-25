@@ -62,6 +62,12 @@
       object-fit: cover;
       border-radius: $border-radius-l;
     }
+
+    &:hover{
+      // PLACER ANIM PARAMS DURATION EN DESSOUS
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+    }
   }
 
   .container-info-card {

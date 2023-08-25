@@ -10,7 +10,7 @@
 
   <% @ducks.each do |duck| %>
 
-    <div class="duck-cards">
+    <div class="duck-cards animate__animated">
 
       <%= link_to duck_path(duck), class: 'container-img-card' do %>
         <%= image_tag duck.url %>
