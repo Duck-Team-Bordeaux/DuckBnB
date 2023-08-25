@@ -6,13 +6,14 @@
   justify-content: center;
   align-items: center;
   gap: 10vh;
+  position: relative;
 
   .search-bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
+    // gap: 2vw;
 
     .input-search {
       width: 40vw;
@@ -25,28 +26,60 @@
 
     .button-search {
       height: 40px;
-      width: 90px;
+      width: 200px;
       border-radius: 3vh;
-      color: $background-color;
+      color: $white-color;
       background-color: $primary-color;
       border: none;
+      &:hover{
+        color: $primary-color;
+        background-color: $white-color;
+      }
     }
   }
+}
 
-  button {
-    height: 40px;
-    padding-inline: 1vw;
-    border-radius: 3vh;
-    color: $background-color;
-    background-color: $primary-color;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5px;
-  }
+.custom-primary-btn{
+  height: 40px;
+  padding-inline: 1vw;
+  border-radius: 3vh;
+  color: $white-color;
+  background-color: $primary-color;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2em;
+  color:white;
+
   p{
     color:white;
   }
+
+  i{
+    color: white;
+  }
+
+  input{
+    color: white;
+  }
+
+  &:hover{
+    background-color: white;
+    outline: 2px solid $primary-color;
+    p{
+      color: $primary-color
+    }
+    i{
+      color: $primary-color;
+    }
+    input{
+      color: $primary-color;
+    }
+  }
+
 }

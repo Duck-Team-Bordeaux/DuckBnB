@@ -1,6 +1,4 @@
-h1{
-
-}
+// -------------- MAIN GRID TEMPLATE
 
 main{
   display: grid;
@@ -12,6 +10,8 @@ main{
   min-height: 80vh;
 }
 
+// -------------- USER PROFILE
+
 .bookings-profile-container{
   @include white-rounded-box;
   display: flex;
@@ -20,6 +20,7 @@ main{
   gap: 0.5em;
   height:30vh;
   position: relative;
+  padding: 3.7em 2em 0.5em 2em;
   margin-top: 6em;
   padding-top: 4em;
 
@@ -35,14 +36,23 @@ main{
     transform: translateX(0%);
     top: -6em;
   }
-
-  p{
+  
+  .info-user {
+    font-weight: 700;
+  }
+  
+  p {
     margin: 0;
   }
-  h3{
+  .user-name{
     margin: 0;
     font-size: 1.5em;
     font-family: $body-font;
+    min-width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
   }
 
   .btn-logout {
@@ -55,12 +65,58 @@ main{
   }
 }
 
+///users/edit
+// -------------- BUTTONS USER
+
+.btn-user-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin-top: 2em;
+
+  a{
+    width: 100%;
+  }
+
+  .btn-user-profil{
+    padding: 0em 2em 0em 2em;
+    width: 100%;
+    border-radius: 2em;
+    height: 4em;
+    margin-top: -3px;
+    margin-left: -31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include prymary-gradient-background;
+    p{
+      color: white;
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    &:hover{
+      background: $white-color;
+      outline: 2px solid $tertiary-color;
+      p{
+        @include prymary-gradient-background;
+        @include font-gradient;
+      }
+    }
+  }
+}
+
+// -------------- DYNAMIC CONTENT NAV BAR
+
 .booking-dynamic-content-nav-bar{
 display: flex;
 justify-content: space-between;
 width: 100%;
 margin: 0 auto;
-margin-bottom: 1em;
+margin-bottom: 1.8em;
 gap: 1em;
 }
 
@@ -70,28 +126,50 @@ gap: 1em;
   height: 3em;
   padding: 0.5em 1em 0.5em 1em;
   cursor: pointer;
-  background-color: $white-color;
+  @include prymary-gradient-background;
   display: flex;
   justify-content: center;
   align-items: center;
   p{
-  color:  $text-color;
   font-family: $body-font;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
+  margin-top: -3px;
+  color: $white-color;
   }
+  &:hover{
+    background: $white-color;
+    outline: 2px solid $tertiary-color;
+    p{
+      @include prymary-gradient-background;
+      @include font-gradient;
+    }
+  }
+
 }
 
 .btn-on{
   position: relative;
-  border: solid 2px $primary-color;
+  background: $white-color;
   p{
-    @include prymary-gradient-background;
-    @include font-gradient;
-    z-index: 1;
+    color: $text-color;
+  }
+  &::after{
+    display: block;
+    content: " ";
+    width: 16px;
+    height: 40px;
+    background-color: $white-color;
+    position: absolute;
+    top: 60px;
+  }
+  &:hover{
+    outline: 0px;
   }
 }
+
+// -------------- DYNAMIC CONTENT BOOKING BOX
 
 .booking-dynamic-content-showbox{
   @include white-rounded-box;
@@ -100,6 +178,8 @@ gap: 1em;
   padding-bottom: 1em;
 }
 
+// -------------- DYNAMIC CONTENT BOOKING CARDS
+
 .my-bookings-card{
 padding: 1em;
 display: flex;
@@ -107,15 +187,44 @@ flex-direction: row;
 justify-content: space-between;
 position: relative;
 
-
   .card-pic-name-date{
     width: 400px;
     display: flex;
-    flex-direction: row;
-    gap: 1em;
-    position: relative;
+    flex-direction: column;
+    gap: 0.3em;
     margin-left: 1em;
     max-width: 20em;
+
+    p{
+      margin: 0;
+    }
+
+    i{
+      margin-right: 6px;
+      @include prymary-gradient-background;
+      @include font-gradient;
+    }
+    .card-pic-name{
+      margin: 0.3em 0 0.2em 0;
+      &::after{
+      display: block;
+      content: " ";
+      width: 413px;
+      height: 1px;
+      background-color: $background-color;
+      position: absolute;
+      transform: translateY(4px);
+      }
+
+    }
+
+    .card-pic-date{
+
+    }
+
+    .card-pic-loc{
+
+    }
   }
 
   img{
@@ -123,18 +232,7 @@ position: relative;
     width: 6em;
     height: 6em;
     object-fit: cover;
-    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.1);
-  }
-
-  .card-pic-name{
-    margin-top: 1em;
-
-  }
-
-  .card-pic-date{
-    position: absolute;
-    bottom: 1.5em;
-    left:0 ;
+    border: 4px solid $background-color;
   }
 
   .my-bookings-card-price{
@@ -143,16 +241,30 @@ position: relative;
     font-weight: 300;
     flex-grow: 1;
     min-width: 4em;
+    margin: 6px 0 0 0;
+    justify-content: flex-end;
+  }
+
+  &::before{
+    display: block;
+    content: " ";
+    width: 40px;
+    height: 4px;
+    background-color: $background-color;
+    position: absolute;
+    left: -20px;
+    top: 65px;
   }
 
   &::after{
     display: block;
     content: " ";
-    width: 95%;
+    width: 110%;
     height: 1px;
-    background-color: $line-color;
+    background-color: $background-color;
     position: absolute;
     bottom: 0;
+    transform: translateX(-35px);
   }
 
   &:last-child {

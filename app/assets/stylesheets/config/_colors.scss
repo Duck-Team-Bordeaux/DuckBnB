@@ -5,7 +5,8 @@ $tertiary-color: #F42CFF;
 $quadrary-color: #FDE827;
 $text-color: #21041E;
 $white-color: #ffff;
-$background-color: #F5ECEA;
+// $background-color: #F5ECEA;
+$background-color: #eed6ce;
 $line-color: #CCCCDF;
 $success-color: #248A3D;
 $warn-color: #FF9532;
@@ -15,17 +16,17 @@ $eror-color: #FF3232;
 
 @mixin prymary-gradient-background {
   background: rgb(255,80,60);
-  background: linear-gradient(90deg, rgba(255,115,99,1) 0%, rgb(248, 117, 255) 100%);
+  background: linear-gradient(90deg, rgb(255,80,60) 0%, rgb(248, 117, 255) 100%);
 }
 
 @mixin secondary-gradient-background {
   background: rgb(255,80,60);
-  background: linear-gradient(90deg, rgb(255, 115, 99) 0%, rgb(252, 235, 99) 100%);
+  background: linear-gradient(90deg, rgb(255,80,60) 0%, rgb(252, 235, 99) 100%);
 }
 
 @mixin tertiary-gradient-background {
   background: rgb(253,232,39);
-  background: linear-gradient(90deg, rgba(253,235,99,1) 0%, rgb(78, 205, 173) 100%);
+  background: linear-gradient(90deg, rgb(248, 117, 255) 0%, rgb(78, 205, 173) 100%);
 }
 
 // --------------- UTILISATION GRADIENT SUR FONT

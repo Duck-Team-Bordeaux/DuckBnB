@@ -5,10 +5,13 @@
         class: "input-search",
         placeholder: "Trouve ton canard..."
       %>
-    <%= submit_tag "Rechercher", name: "", class: "button-search" %>
+    <%= submit_tag "Rechercher", name: "", class: "button-search custom-primary-btn" %>
+
+
+
   <% end %>
-  <button>
-    <%= image_tag("filter.svg", {:style => "width:15px;"}) %>
+  <button class="custom-primary-btn">
+    <i class="fa-solid fa-filter"></i>
     <p>Filtres</p>
   </button>
 </div>
