@@ -2,17 +2,22 @@
 
 <main>
 
+ <%# ---- DEBUT box profil ---- %>
   <div class="bookings-profile-container">
     <img src="<%= current_user.url %>" alt="user" class='img-profile-bookings'>
-    <h3><%= current_user.last_name %> <%= current_user.first_name %></h3>
-    <p>Email : <%= current_user.email %></p>
-    <p>Localisation : <%= current_user.location %></p>
-    <p> <%= @favorites.count %> réservations </p>
-    <p> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
+    <h3 class="user-name"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+    <p><i class="fa-solid fa-envelope"></i> <%= current_user.email %></p>
+    <p class="p-bottom"><i class="fa-solid fa-location-dot"></i> <%= current_user.location %></p>
+
+      <p class="live-info"> <%= @bookings.count %> réservations </p>
+      <p class="live-info"> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
+
     <%# <%= link_to '/users/edit' do %>
         <%# <div class="btn-user-profil"><p > Modifier mon profil </p></div> %>
     <%# <% end %>
-    <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
+    <%= button_to "Modifier profile", users_edit_path, class: 'btn-logout btn-top'  %>
+    <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout '  %>
+  <%# ---- FIN box profil ---- %>
   </div>
 
   <%# ---- DEBUT booking-dynamic-content-container ---- %>
