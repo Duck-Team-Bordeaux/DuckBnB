@@ -54,7 +54,7 @@
     border-radius: 2em;
     object-fit: cover;
     position: relative;
-    outline: solid 10px $background-color;
+    outline: solid 10px $primary-color;
     position: relative;
   }
 
@@ -107,6 +107,8 @@
     &:hover{
       filter: drop-shadow(-1px 1px 16px #fff);
       color: $primary-color;
+      animation: tada; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 1s; /* don't forget to set a duration! */
     }
   }
 
@@ -175,6 +177,8 @@
     &:hover{
       outline: 2px solid $tertiary-color;
       background: $white-color;
+      animation: tada; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 1s; /* don't forget to set a duration! */
       .txt{
         @include prymary-gradient-background;
         @include font-gradient;
