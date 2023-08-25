@@ -194,7 +194,48 @@
     margin-top: 4em;
     h2{
       margin-top: 0;
+      margin-bottom: 10px;
       @include h2();
+    }
+  }
+
+  .grid-comment-template{
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+
+    .grid-comment-templat-child{
+      .com-box{
+        display: flex;
+        align-items: center;
+        .img-developpeur{
+          width: 4em;
+          height: 4em;
+          border-radius: 50%;
+          margin-right: 8px;
+          margin-top: -1.7em;
+      }
+        h4{
+          margin: 6px;
+        }
+        p{
+          margin: 0;
+        }
+      }
+      .like{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .fa-regular{
+          margin-left: 16px;
+        }
+        p{
+          margin-left: 70px;
+          @include text-content-small();
+        }
+      }
     }
   }
 }
