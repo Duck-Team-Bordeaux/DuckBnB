@@ -105,7 +105,7 @@ end
 puts 'Booking seed Lauch'
 random_bookings_seed = (2..6).to_a.sample
 p "random_bookings_seed => #{random_bookings_seed}"
-ducks_id = (0..33).step(random_bookings_seed).to_a.shuffle
+ducks_id = ((Duck.last.id - 35)..Duck.last.id).step(random_bookings_seed).to_a.shuffle
 p "sufling the bookings id => #{ducks_id}"
 ducks_id.each do |id|
   Booking.create(
