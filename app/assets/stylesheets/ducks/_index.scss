@@ -16,6 +16,7 @@
   -webkit-text-fill-color: transparent;
   margin-left: 6px;
 }
+
 .card-pub {
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('ad.png');
   background-position: center;
@@ -48,8 +49,6 @@
   justify-content: space-between;
   align-items: start;
   position: relative;
-
-
 
   .container-img-card {
     width: 300px;
@@ -122,18 +121,22 @@
   align-items: center;
   border: none;
   position: fixed;
+  left: 38%;
   bottom: 0;
-  z-index: 12;
+  z-index: 99;
   color: white;
   box-shadow: 0px 0px 16px 8px rgba(225, 46, 114,0.5);
   transform: translateX();
   @include prymary-gradient-background();
-  .fa-location-dot{
+
+  i{
     margin-right: 6px;
   }
+
   .txt{
     color: white;
   }
+
   &:hover{
     outline: 2px solid $tertiary-color;
     background: $white-color;
@@ -141,22 +144,10 @@
       @include prymary-gradient-background;
       @include font-gradient;
     }
+
     .txt{
       @include prymary-gradient-background;
       @include font-gradient;
     }
   }
-
-  // &:hover{
-  //   outline: 2px solid $tertiary-color;
-  //   background: $white-color;
-  //   .txt{
-  //     @include prymary-gradient-background;
-  //     @include font-gradient;
-  //     color: $primary-color;
-  //   }
-  // }
-
-
-
 }
