@@ -46,6 +46,9 @@
             <h4 class="card-pic-name">  <%= booking.duck.name %> </h4>
             <p class="card-pic-date"><i class="fa-solid fa-calendar-days"></i> <span><%= (1..15).to_a.sample %> sept</span> - <span><%= (15..30).to_a.sample %> sept</span> <span>2023</span></p>
             <p class="card-pic-loc"><i class="fa-solid fa-user"></i> Proprietaire : <span> <%= booking.duck.user.first_name %> <%= booking.duck.user.last_name %> </span> </p>
+          <%= link_to booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
           </div>
           <h4 class="my-bookings-card-price"> <%= booking.duck.price %>€</h4>
         </div>
