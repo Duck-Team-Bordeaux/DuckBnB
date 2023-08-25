@@ -7,9 +7,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(user_id: current_user.id, duck_id: params[:duck_id])
     if @booking.save
-      redirect_to bookings_path
+      redirect_to user_bookings_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,10 +27,6 @@ class BookingsController < ApplicationController
   end
 
   private
-
-  def booking_params
-    params.require(:booking).permit(:user_id)
-  end
 
   def set_duck
     @ducks = Duck.where(params['user_id'])
