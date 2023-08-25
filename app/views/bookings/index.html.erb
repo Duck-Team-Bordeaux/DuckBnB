@@ -13,10 +13,13 @@
 <main>
 
   <div class="bookings-profile-container">
-    <%= image_tag 'macron.png' %>
-    <h3><%= current_user.email %></h3>
-    <p> <%= Booking.all.where(user_id: current_user.id).count %> bookings </p>
-    <p> <%= Duck.all.where(user_id: current_user.id).count %> ducks </p>
+    <img src="<%= current_user.url %>" alt="user" class='img-profile-bookings'>
+    <h3><%= current_user.last_name %> <%= current_user.first_name %></h3>
+    <p>Email : <%= current_user.email %></p>
+    <p>Localisation : <%= current_user.location %></p>
+    <p> <%= Booking.all.where(user_id: current_user.id).count %> réservations </p>
+    <p> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
+    <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
   </div>
 
   <div class="booking-dynamic-content-container">
