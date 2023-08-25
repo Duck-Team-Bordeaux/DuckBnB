@@ -59,10 +59,12 @@
           <div class="card-pic-name-date">
             <h5 class="card-pic-name">  <%= duck.name %> </h5>
             <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
+            <%= link_to edit_duck_path(duck) do%>
+              <i class="fa-solid fa-pen-to-square"></i>
+            <% end %>
           </div>
           <h4 class="my-bookings-card-price"> <%= duck.price %>€</h4>
 
-        <%= link_to 'modif', edit_duck_path(duck)%>
         </div>
       <% end %>
     <% end %>
