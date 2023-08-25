@@ -21,7 +21,7 @@ User.create(
   last_name: 'Tsonga',
   email: 'jojo@gmail.com',
   url: 'https://static.actu.fr/uploads/2022/05/28b9810de87593358b1905bb8b0ec0b6482b4ec0.jpg',
-  location: 'Merignac',
+  location: 'Place de la Bourse',
   password: 'qwertyuiop'
 )
 
@@ -30,7 +30,7 @@ User.create(
   last_name: 'Gateau',
   email: 'mamiegateau@gmail.com',
   url: 'https://media2.woopic.com/api/v1/images/2115%2Fwebedia-articles%2F7ae%2Fb5c%2F067fc2d2d7c8c16b33d164601b%2F1584060-si-vous-aimez-confectionner-de-bons-peti-orig-1.jpeg?facedetect=1&quality=85',
-  location: '107 Cr Balguerie Stuttenberg, 33300 Bordeaux',
+  location: 'La Victoire',
   password: 'qwertyuiop'
 )
 
@@ -39,7 +39,7 @@ User.create(
   last_name: 'Macron',
   email: 'manu@gmail.com',
   url: 'https://media-mcetv.ouest-france.fr/wp-content/uploads/2020/09/rentree-2020-emmanuel-macron-fait-une-grosse-faute-de-francais_.jpg',
-  location: 'Av. des Champs-Élysées, 75008 Paris',
+  location: 'Arc de Triomphe',
   password: 'qwertyuiop'
 )
 
@@ -48,7 +48,7 @@ User.create(
   last_name: 'Lebricoleur',
   email: 'boblebricoleur@gmail.com',
   url: 'https://fr.web.img5.acsta.net/c_310_420/medias/nmedia/18/69/18/59/18865095.jpg',
-  location: '118 Rue du Jardin public, 33300 Bordeaux',
+  location: 'Place du Parlement',
   password: 'qwertyuiop'
 )
 
