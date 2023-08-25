@@ -62,6 +62,9 @@
             <%= link_to edit_duck_path(duck) do%>
               <i class="fa-solid fa-pen-to-square"></i>
             <% end %>
+            <%= link_to duck_path(duck), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
           </div>
           <h4 class="my-bookings-card-price"> <%= duck.price %>€</h4>
 
