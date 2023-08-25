@@ -23,8 +23,12 @@
     <h2>Ma réservation</h2>
     <div class="show-my-order-grid">
       <div class="calendar">
-        <%= simple_form_for @booking, url: duck_bookings_path(duck_id: @duck.id), method: :post do |f| %>
-          <%= f.button :submit, 'Réserver', class: 'btn-order'%>
+        <% if @duck.available %>
+          <%= simple_form_for @booking, url: duck_bookings_path(duck_id: @duck.id), method: :post do |f| %>
+            <%= f.button :submit, 'Réserver', class: 'btn-order'%>
+          <% end %>
+        <% else %>
+          <h4>Ce canard n'est pas disponible pour le moment</h4>
         <% end %>
       </div>
     </div>
