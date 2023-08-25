@@ -11,8 +11,7 @@ Rails.application.routes.draw do
       get :map
       get :myducks
     end
-    resources :bookings, only: %i[create edit update]
-    resources :favorites, only: %i[new edit]
+    resources :bookings, only: %i[new create edit update]
   end
   resources :bookings, only: [:destroy]
   resources :favorites, only: [:destroy]

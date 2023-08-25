@@ -102,7 +102,7 @@ categories.each do |category|
 end
 
 # -------------- RANDOM BOOKINGS SEED
-puts 'Booking seed Lauch => Fasten your belts Motherfucker !'
+puts 'Booking seed Lauch'
 random_bookings_seed = (2..6).to_a.sample
 p "random_bookings_seed => #{random_bookings_seed}"
 ducks_id = ((Duck.last.id - 35)..Duck.last.id).step(random_bookings_seed).to_a.shuffle
