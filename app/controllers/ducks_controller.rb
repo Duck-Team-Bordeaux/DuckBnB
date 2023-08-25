@@ -8,17 +8,15 @@ class DucksController < ApplicationController
     end
   end
 
-
   def map
-    @ducks = Duck.all
-
-    @duck_locations = @ducks.map(&:user).compact
-
-    @markers = @duck_locations.map do |user|
+    @users = User.all
+    @markers = @users.map do |user|
       if user.latitude.present? && user.longitude.present?
       {
         lat: user.latitude,
-        lng: user.longitude
+        lng: user.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {user: user}),
+        marker_html: render_to_string(partial: "marker")
       }
       end
     end.compact
