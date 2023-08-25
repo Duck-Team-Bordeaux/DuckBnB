@@ -1,18 +1,31 @@
+.form-container{
+  outline: none;
+  border: none;
+}
+
+
 input {
   border: none;
   border-bottom: 1px solid $line-color;
   background-color: $background-color;
   margin-left: 10px;
   width: 80%;
+  background-color: white;
+  border-radius: 1em;
+  min-height: 2em;
 }
 
 textarea {
   border: none;
+  background-color: white;
+  border-radius: 1em;
   border-bottom: 1px solid $line-color;
-  background-color: $background-color;
+  background-color: $white-color;
   margin-left: 10px;
   width: 80%;
 }
+
+
 
 .optional, .required {
   display: flex;

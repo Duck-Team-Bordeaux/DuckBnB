@@ -120,8 +120,8 @@
 
     h2 {
       @include h2();
-      text-align: right;
-      margin: 0 0.5em 0 0;
+      text-align: left;
+      margin: 0px 0.5em 0 0;
     }
 
     p {
@@ -136,6 +136,7 @@
 
       .calendar {
         object-fit: cover;
+        position: relative;
       }
     }
   }
@@ -166,27 +167,26 @@
     box-shadow: $btn-shadow;
     position: absolute;
     border-radius: 2em;
-    padding: 1em 1em 1em 1em;
-    width: 30%;
-    right: 33%;
+    padding: 1em 8em 1em 4em;
+    width: 25%;
+    right: -744px;
+    top: -69px;
     text-align: center;
     cursor: pointer;
     font-weight: 700;
     font-size: 1.2em;
-    .txt{
-      color: white;
-    }
+    color: white;
 
     &:hover{
       outline: 2px solid $tertiary-color;
       background: $white-color;
       animation: tada; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 1s; /* don't forget to set a duration! */
-      .txt{
-        @include prymary-gradient-background;
-        @include font-gradient;
-        color: $primary-color;
-      }
+      @include prymary-gradient-background;
+      @include font-gradient;
+      color: $primary-color;
+
+
     }
 
   }
@@ -209,36 +209,47 @@
     grid-template-columns: 1fr 1fr;
     gap: 2em;
 
-    .grid-comment-templat-child{
-      .com-box{
-        display: flex;
-        align-items: center;
-        .img-developpeur{
-          width: 4em;
-          height: 4em;
-          border-radius: 50%;
-          margin-right: 8px;
-          margin-top: -1.7em;
+  }
+
+  .grid-comment-templat-child{
+    display: grid;
+    grid-auto-columns: auto;
+
+    .com-box{
+      display: flex;
+      align-items: center;
+      .img-developpeur{
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        margin-right: 8px;
+        margin-top: -1.7em;
+    }
+      h4{
+        margin: 6px;
       }
-        h4{
-          margin: 6px;
-        }
-        p{
-          margin: 0;
-        }
+      p{
+        margin: 0;
       }
-      .like{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .fa-regular{
-          margin-left: 16px;
-        }
-        p{
-          margin-left: 70px;
-          @include text-content-small();
-        }
+    }
+    .like{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .fa-regular{
+        margin-left: 16px;
+      }
+      p{
+        margin-left: 70px;
+        @include text-content-small();
       }
     }
   }
+
+
+
+
+
+
+
 }
