@@ -1,6 +1,17 @@
 .form-container{
   outline: none;
   border: none;
+
+
+  label{
+    font-family: $headers-font;
+    color: $text-color;
+  }
+  .text{
+    min-height: 10em;
+  }
+
+
 }
 
 
@@ -40,11 +51,21 @@ textarea {
 }
 
 .btn {
+  cursor: pointer;
   padding: 10px 15px;
   border-radius: 3vh;
-  color: $background-color;
+  color: $white-color;
   background-color: $primary-color;
   border: none;
-  width: 30%;
+  width: 13em;
   margin: 8px 35%;
+  font-size: 1.4em;
+  font-weight: 700;
+
+  &:hover{
+    background-color: white;
+    color: $primary-color;
+    animation: pulse;
+    animation-duration: 1s;
+  }
 }
