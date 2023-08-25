@@ -1,0 +1,6 @@
+<h3><%= user.first_name %></h3>
+<div style="display:flex;">
+  <% Duck.where(user: user).each do |duck| %>
+  <img src=<%= duck.url %> alt="">
+  <% end %>
+</div>

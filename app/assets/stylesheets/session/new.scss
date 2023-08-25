@@ -1,5 +1,6 @@
 h2 {
   text-align: center;
+  margin-top: 20vh;
 }
 
 #error_explanation {
@@ -9,6 +10,7 @@ h2 {
 .sign-in-container {
   width: 40%;
   margin: 0 auto;
+  margin-bottom: 25vh;
   border: 1px solid $line-color;
   padding: 24px;
   border-radius: $border-radius-l;
@@ -50,4 +52,8 @@ h2 {
   input {
     width: 3%;
   }
+}
+
+.btn-sign-up {
+  background-color: $background-color;
 }

@@ -9,7 +9,9 @@
   </div> %>
 
   <% @ducks.each do |duck| %>
-    <div class="duck-cards">
+
+    <div class="duck-cards animate__animated">
+
       <%= link_to duck_path(duck), class: 'container-img-card' do %>
         <%= image_tag duck.url %>
       <% end %>
@@ -21,11 +23,13 @@
           <% else %>
             <p class="unavailable">Indisponible</p>
           <% end %>
-          <p><%= duck.price %> € par nuit</p>
+          <p><%= duck.price %> € <span class="parnuit">par nuit</span></p>
         </div>
-        <p><i class="fa-solid fa-star"></i><%= duck.rating %></p>
+        <p><%= duck.rating %><i class="fa-solid fa-star rating"></i></p>
       </div>
     </div>
   <% end %>
-  <%= link_to 'Afficher la carte', map_path, :class => 'btn-map' %>
+  <%= link_to map_ducks_path do%>
+    <p class="btn-map"><i class="fa-solid fa-location-dot"></i><span class="txt">Proche de moi<span></p>
+  <% end %>
 </div>

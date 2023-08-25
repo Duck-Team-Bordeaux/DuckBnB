@@ -1,0 +1,83 @@
+<%# http://127.0.0.1:3000/users/1/bookings %>
+
+<%# @ducks => tout les ducks du user car @ducks = Duck.where(user_id: 1) ds controler%>
+<%# @bookings => tout les booking de user car @bookings = @user.bookings ds controler%>
+
+<%# <% @bookings.each do |booking| %>
+<%# <%= booking.user.email %>
+<%# <%= @ducks.name %>
+<%# <%= @ducks.price %>
+<%# <% end %>
+
+
+<main>
+
+   <%# ---- DEBUT box profil ---- %>
+  <div class="bookings-profile-container">
+    <img src="<%= current_user.url %>" alt="user" class='img-profile-bookings'>
+    <h3 class="user-name"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+    <p><i class="fa-solid fa-envelope"></i> <%= current_user.email %></p>
+    <p class="p-bottom"><i class="fa-solid fa-location-dot"></i> <%= current_user.location %></p>
+
+      <p class="live-info"> <%= @bookings.count %> réservations </p>
+      <p class="live-info"> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
+
+    <%# <%= link_to '/users/edit' do %>
+        <%# <div class="btn-user-profil"><p > Modifier mon profil </p></div> %>
+    <%# <% end %>
+    <%= button_to "Paramètres", edit_user_path(current_user), class: 'btn-logout btn-top'  %>
+    <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout '  %>
+  <%# ---- FIN box profil ---- %>
+  </div>
+
+  <div class="booking-dynamic-content-container">
+
+    <div class="booking-dynamic-content-nav-bar">
+      <%= link_to 'Mes réservations', user_bookings_path(current_user), :class => 'booking-dynamic-content-button' %>
+      <%= link_to 'Mes canards', myducks_ducks_path, :class => 'booking-dynamic-content-button btn-on' %>
+      <%= link_to 'Mes favoris', user_favorites_path(current_user), :class => 'booking-dynamic-content-button' %>
+    </div>
+
+    <div class="booking-dynamic-content-showbox">
+
+      <%# ---------------------- DEBUT CARD ---------------------- %>
+
+      <%# <% @bookings.each do |booking| %>
+      <%# <%= booking.user.email %>
+      <%# <%= @ducks.name %>
+      <%# <%= @ducks.price %>
+      <%# <% end %>
+    <% if @ducks.count == 0 %>
+
+      <h4>Vous n'avez aucun canard</h4>
+
+    <% else %>
+
+      <% @ducks.each do |duck| %>
+        <div class="my-bookings-card">
+          <%= image_tag duck.url %>
+          <div class="card-pic-name-date">
+            <h5 class="card-pic-name">  <%= duck.name %> </h5>
+            <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
+            <%= link_to edit_duck_path(duck) do%>
+              <i class="fa-solid fa-pen-to-square"></i>
+            <% end %>
+          </div>
+          <h4 class="my-bookings-card-price"> <%= duck.price %>€</h4>
+
+        </div>
+      <% end %>
+    <% end %>
+    <%# ---------------------- FIN CARD ----------------------  %>
+
+
+
+
+
+
+    <%# ---------------------- FIN booking-dynamic-content-showbox ----------------------  %>
+    </div>
+  <%# ---------------------- FIN booking-dynamic-content-container ----------------------  %>
+  </div>
+
+</main>

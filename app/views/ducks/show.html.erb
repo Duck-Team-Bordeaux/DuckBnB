@@ -5,7 +5,7 @@
     <p><%= @duck.description %></p>
     <div class="price-item"><%= @duck.price %>€ <span> par nuit </span></div>
     <div class="show-user-box">
-      <%= image_tag "macron.png", class: 'avatar-picture' %>
+      <img src="<%= @duck.user.url %>" alt="user" class='img-profile-show'>
       <div>
         <p>Ce canard appartient à :</p>
         <h4><%= @duck.user.first_name %></h4>
@@ -16,36 +16,40 @@
 
   <div class="show-img-box">
     <%= image_tag @duck.url, class: "show-duck-picture" %>
-    <i class="fa-regular fa-heart wishlist-icon"></i>
+    <i class="fa-solid fa-heart wishlist-icon animate__animated"></i>
   </div>
 
   <div class="show-box-order">
     <h2>Ma réservation</h2>
     <div class="show-my-order-grid">
       <div class="calendar">
-        <%= image_tag "fake-calendar.png" %>
-      </div>
-      <div class="recap-order">
-        <div>
-          <p> 65€ x 7 nuit</p>
-          <p> 433 €</p>
-        </div>
-        <div>
-          <p> Taxes</p>
-          <p> 24 €</p>
-        </div>
-        <div>
-          <p class="total"> Total</p>
-          <p class="total"> 567 €</p>
-        </div>
+        <% if @duck.available %>
+          <%= simple_form_for @booking, url: duck_bookings_path(duck_id: @duck.id), method: :post do |f| %>
+            <%= f.button :submit, 'Réserver', class: 'btn-order'%>
+          <% end %>
+        <% else %>
+          <h4>Ce canard n'est pas disponible pour le moment</h4>
+        <% end %>
       </div>
     </div>
-    <div class="btn-order">Réserver mon canard</div>
   </div>
 
   <div class="show-box-review">
     <h2>Commentaires</h2>
+    <div class="grid-comment-template">
+      <div class="grid-comment-templat-child">
+        <div class="com-box">
+          <%= image_tag "img-valentine", class: 'img-developpeur' %>
+          <div class='com'>
+            <h4>Valentine Ecrepont</h4>
+            <p>Trop sympa, j'ai pu régler mon problème super vite grâce à ce canard. Et puis ça permet de pouvoir avoir un canard différent de d'habitude !</p>
+          </div>
+        </div>
+          <div class='like'>
+            <p>Il y a 10 minutes</p>
+            <i class="fa-regular fa-thumbs-up" style="color:#00D9A1"></i>
+          </div>
+      <div>
+    </div>
   </div>
-
-
 </div>

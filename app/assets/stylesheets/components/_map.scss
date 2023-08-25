@@ -1,0 +1,22 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: $body-font;
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  object-position: center;
+  }
+}

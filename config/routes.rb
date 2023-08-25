@@ -3,12 +3,16 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users do
     resources :bookings, only: [:index]
+    resources :favorites, only: %i[index]
   end
-  get "/map", to: "ducks#map"
+
   resources :ducks do
-    resources :bookings, only: %i[create edit update]
+    collection do
+      get :map
+      get :myducks
+    end
+    resources :bookings, only: %i[new create edit update]
   end
   resources :bookings, only: [:destroy]
-  resources :favorites, only: %i[new edit]
   resources :favorites, only: [:destroy]
 end

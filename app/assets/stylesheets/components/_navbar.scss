@@ -11,6 +11,10 @@ nav {
   top: 0;
   z-index: 10;
 
+  .nav-box{
+    position: relative;
+  }
+
 
   .link-nav {
     @include prymary-gradient-background();
@@ -25,23 +29,47 @@ nav {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 40px;
+    gap: 0.5em;
+
+    .add-my-duck{
+      margin-right: 26px;
+      i{
+        @include prymary-gradient-background;
+        @include font-gradient;
+      }
+    }
+
+    .fa-circle-plus{
+      margin-top: 3px;
+    }
 
     .put{
       font-family: $body-font, sans-serif;
       text-decoration: none;
       color: $text-color;
       font-size: 1em;
-      margin-right: 1em;
+      width: fit-content;
+      text-align: right;
+
+      // &::after{
+      //   display: block;
+      //   content: " ";
+      //   width: 1px;
+      //   height: 40px;
+      //   background-color: $text-color;
+      //   position: absolute;
+      //   right: 189px;
+      //   top: 6px;
+      // }
     }
 
     .container-img-profile {
-      width: 40%;
+      width: fit-content;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: end;
-      gap: 20px;
+      gap: 8px;
 
       .pseudo-name{
         font-family: $body-font, sans-serif;

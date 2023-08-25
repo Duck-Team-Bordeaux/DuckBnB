@@ -2,7 +2,9 @@ class FavoritesController < ApplicationController
   before_action :set_duck, only: %i[show create edit update destroy]
 
   def index
-    @favorites = Favorite.all
+    @user = current_user
+    @favorites = Favorite.where(user_id: current_user.id)
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def new
