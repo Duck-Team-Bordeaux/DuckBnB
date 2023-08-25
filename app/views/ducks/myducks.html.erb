@@ -18,7 +18,7 @@
     <p>Email : <%= current_user.email %></p>
     <p>Localisation : <%= current_user.location %></p>
     <p> <%= @bookings.count %> réservations </p>
-    <p> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
+    <p> <%= @ducks.count %> canards </p>
     <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
   </div>
 
@@ -26,8 +26,8 @@
 
 
     <div class="booking-dynamic-content-nav-bar">
-      <%= link_to 'Mes réservations', user_bookings_path(current_user), :class => 'booking-dynamic-content-button btn-on' %>
-      <%= link_to 'Mes canards', myducks_ducks_path, :class => 'booking-dynamic-content-button' %>
+      <%= link_to 'Mes réservations', user_bookings_path(current_user), :class => 'booking-dynamic-content-button' %>
+      <%= link_to 'Mes canards', myducks_ducks_path, :class => 'booking-dynamic-content-button btn-on' %>
       <div class="booking-dynamic-content-button"><p>Mes favoris</p></div>
     </div>
 
@@ -41,20 +41,20 @@
       <%# <%= @ducks.name %>
       <%# <%= @ducks.price %>
       <%# <% end %>
-    <% if @bookings.count == 0 %>
+    <% if @ducks.count == 0 %>
 
-      <h4>Vous n'avez aucune reservation</h4>
+      <h4>Vous n'avez aucun canard</h4>
 
     <% else %>
 
-      <% @bookings.each do |booking| %>
+      <% @ducks.each do |duck| %>
         <div class="my-bookings-card">
-          <%= image_tag booking.duck.url %>
+          <%= image_tag duck.url %>
           <div class="card-pic-name-date">
-            <h5 class="card-pic-name">  <%= booking.duck.name %> </h5>
+            <h5 class="card-pic-name">  <%= duck.name %> </h5>
             <p class="card-pic-date"> <span>8 sept</span> - <span>12 sept</span> <span>2023</span></p>
           </div>
-          <h4 class="my-bookings-card-price"> <%= booking.duck.price %>€</h4>
+          <h4 class="my-bookings-card-price"> <%= duck.price %>€</h4>
         </div>
       <% end %>
 

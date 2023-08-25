@@ -24,6 +24,12 @@ class DucksController < ApplicationController
     end.compact
   end
 
+  def myducks
+    @user = current_user
+    @bookings = Booking.where(user_id: current_user.id)
+    @ducks = Duck.where(user_id: current_user.id)
+  end
+
   def show
     @booking = Booking.new
   end
