@@ -23,24 +23,11 @@
     <h2>Ma réservation</h2>
     <div class="show-my-order-grid">
       <div class="calendar">
-        <%= image_tag "fake-calendar.png" %>
-      </div>
-      <div class="recap-order">
-        <div>
-          <p> 65€ x 7 nuit</p>
-          <p> 433 €</p>
-        </div>
-        <div>
-          <p> Taxes</p>
-          <p> 24 €</p>
-        </div>
-        <div>
-          <p class="total"> Total</p>
-          <p class="total"> 567 €</p>
-        </div>
+        <%= simple_form_for @booking, url: duck_bookings_path(duck_id: @duck.id), method: :post do |f| %>
+          <%= f.button :submit, 'Réserver', class: 'btn-order'%>
+        <% end %>
       </div>
     </div>
-    <div class="btn-order"><span class="txt">Réserver mon canard </span></div>
   </div>
 
   <div class="show-box-review">
