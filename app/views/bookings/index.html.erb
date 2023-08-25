@@ -9,9 +9,9 @@
     <p>Localisation : <%= current_user.location %></p>
     <p> <%= @bookings.count %> réservations </p>
     <p> <%= Duck.all.where(user_id: current_user.id).count %> canards </p>
-    <%= link_to '/users/edit' do %>
-        <div class="btn-user-profil"><p > Modifier mon profil </p></div>
-    <% end %>
+    <%# <%= link_to '/users/edit' do %>
+        <%# <div class="btn-user-profil"><p > Modifier mon profil </p></div> %>
+    <%# <% end %>
     <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
   </div>
 

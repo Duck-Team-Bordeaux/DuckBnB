@@ -29,5 +29,7 @@
       </div>
     </div>
   <% end %>
-  <%= link_to 'Afficher la carte', map_ducks_path, :class => 'btn-map' %>
+  <%= link_to map_ducks_path do%>
+    <p class="btn-map"><i class="fa-solid fa-location-dot"></i><span class="txt">Afficher la carte<span></p>
+  <% end %>
 </div>
