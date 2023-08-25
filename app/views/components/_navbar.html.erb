@@ -13,7 +13,7 @@
 
       <%= link_to user_bookings_path(current_user), class: 'container-img-profile' do %>
         <p class='pseudo-name'><%= current_user.first_name %></p>
-        <%= image_tag current_user.url, alt:"Photo de profil" %>
+        <img src="<%= current_user.url %>" alt="profil piscture">
       <% end %>
     <% else %>
       <%= link_to 'Mettre mon canard sur duckbnb', new_user_session_path, :class => 'put' %>
