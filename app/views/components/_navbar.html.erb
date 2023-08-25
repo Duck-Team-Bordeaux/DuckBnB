@@ -19,7 +19,7 @@
       <%= link_to 'Mettre mon canard sur duckbnb', new_user_session_path, :class => 'put' %>
       <%= link_to new_user_session_path, class: 'container-img-profile' do %>
         <p class='pseudo-name'>Se connecter</p>
-        <%= image_tag "img-profile.png", alt:"Photo de profil" %>
+        <%= image_tag @duck.user.url, alt:"Photo de profil" %>
       <% end %>
     <% end %>
 
