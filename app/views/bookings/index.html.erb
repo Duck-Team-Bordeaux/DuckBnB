@@ -4,7 +4,7 @@
 
   <div class="bookings-profile-container">
     <img src="<%= current_user.url %>" alt="user" class='img-profile-bookings'>
-    <h3><%= current_user.last_name %> <%= current_user.first_name %></h3>
+    <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
     <p>Email : <%= current_user.email %></p>
     <p>Localisation : <%= current_user.location %></p>
     <p> <%= @bookings.count %> réservations </p>
