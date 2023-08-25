@@ -8,6 +8,28 @@ class DucksController < ApplicationController
     end
   end
 
+
+  def map
+    @ducks = Duck.all
+
+    @duck_locations = @ducks.map(&:user).compact
+
+    @markers = @duck_locations.map do |user|
+      if user.latitude.present? && user.longitude.present?
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
+      end
+    end.compact
+  end
+
+  def myducks
+    @user = current_user
+    @bookings = Booking.where(user_id: current_user.id)
+    @ducks = Duck.where(user_id: current_user.id)
+  end
+
   def show
     @booking = Booking.new
   end
@@ -39,10 +61,6 @@ class DucksController < ApplicationController
   def destroy
     @duck.destroy
     redirect_to ducks_path, status: :see_other
-  end
-
-  def map
-    @ducks = Duck.all
   end
 
   private

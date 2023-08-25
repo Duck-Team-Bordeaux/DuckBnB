@@ -51,6 +51,8 @@ gem "simple_form"
 
 gem "geocoder"
 
+gem "dotenv-rails"
+
 gem "font-awesome-sass", "~> 6.1"
 
 # gem 'animatecss', '~> 0.0.11'

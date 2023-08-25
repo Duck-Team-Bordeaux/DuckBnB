@@ -18,25 +18,30 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
-  max-height: 6em;
+  height:30vh;
   position: relative;
   padding: 3.7em 2em 0.5em 2em;
   margin-top: 6em;
+  padding-top: 4em;
 
-  img{
-    border-radius: 50%;
-    width: 8em;
-    height: 8em;
+  .img-profile-bookings {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border: 8px solid $background-color;
+    border-radius: 100%;
+    z-index: 1;
+    border: 0.25em solid $primary-color;
+    cursor: pointer;
     position: absolute;
     transform: translateX(0%);
     top: -6em;
   }
-  .info-user{
+  
+  .info-user {
     font-weight: 700;
   }
-  p{
+  
+  p {
     margin: 0;
   }
   .user-name{
@@ -48,6 +53,15 @@ main{
     flex-direction: row;
     justify-content: center;
     gap: 16px;
+  }
+
+  .btn-logout {
+    color: white;
+    width: 130px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
   }
 }
 

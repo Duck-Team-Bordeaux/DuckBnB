@@ -5,7 +5,7 @@
     <p><%= @duck.description %></p>
     <div class="price-item"><%= @duck.price %>€ <span> par nuit </span></div>
     <div class="show-user-box">
-      <%= image_tag "macron.png", class: 'avatar-picture' %>
+      <img src="<%= @duck.user.url %>" alt="user" class='img-profile-show'>
       <div>
         <p>Ce canard appartient à :</p>
         <h4><%= @duck.user.first_name %></h4>

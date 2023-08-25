@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   resources :users do
     resources :bookings, only: [:index]
   end
-  get "/map", to: "ducks#map"
+
   resources :ducks do
+    collection do
+      get :map
+      get :myducks
+    end
     resources :bookings, only: %i[create edit update]
   end
   resources :bookings, only: [:destroy]

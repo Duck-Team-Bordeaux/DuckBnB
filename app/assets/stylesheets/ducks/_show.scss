@@ -83,16 +83,17 @@
         margin: 0;
       }
     }
-  }
 
-  .avatar-picture{
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
-    object-fit: cover;
-    border: 10px solid $background-color;
-    z-index: 1;
-    cursor: pointer;
+
+    .img-profile-show {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 100%;
+      z-index: 1;
+      border: 0.25em solid $primary-color;
+      cursor: pointer;
+    }
   }
 
   .wishlist-icon{
